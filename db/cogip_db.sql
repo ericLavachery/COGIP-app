@@ -8,19 +8,9 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema COGIP
+-- Table `id6935654_cogip`.`type_soc`
 -- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema COGIP
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `COGIP` DEFAULT CHARACTER SET utf8 ;
-USE `COGIP` ;
-
--- -----------------------------------------------------
--- Table `COGIP`.`type_soc`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `COGIP`.`type_soc` (
+CREATE TABLE IF NOT EXISTS `id6935654_cogip`.`type_soc` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `type` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
@@ -28,9 +18,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `COGIP`.`societe`
+-- Table `id6935654_cogip`.`societe`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `COGIP`.`societe` (
+CREATE TABLE IF NOT EXISTS `id6935654_cogip`.`societe` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nom` VARCHAR(45) NULL,
   `adresse` VARCHAR(45) NULL,
@@ -42,16 +32,16 @@ CREATE TABLE IF NOT EXISTS `COGIP`.`societe` (
   INDEX `fk_societe_type_soc1_idx` (`type_soc_id` ASC),
   CONSTRAINT `fk_societe_type_soc1`
     FOREIGN KEY (`type_soc_id`)
-    REFERENCES `COGIP`.`type_soc` (`id`)
+    REFERENCES `id6935654_cogip`.`type_soc` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `COGIP`.`personne`
+-- Table `id6935654_cogip`.`personne`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `COGIP`.`personne` (
+CREATE TABLE IF NOT EXISTS `id6935654_cogip`.`personne` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nom` VARCHAR(45) NULL,
   `prenom` VARCHAR(45) NULL,
@@ -62,16 +52,16 @@ CREATE TABLE IF NOT EXISTS `COGIP`.`personne` (
   INDEX `fk_personne_societe1_idx` (`societe_id` ASC),
   CONSTRAINT `fk_personne_societe1`
     FOREIGN KEY (`societe_id`)
-    REFERENCES `COGIP`.`societe` (`id`)
+    REFERENCES `id6935654_cogip`.`societe` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `COGIP`.`facture`
+-- Table `id6935654_cogip`.`facture`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `COGIP`.`facture` (
+CREATE TABLE IF NOT EXISTS `id6935654_cogip`.`facture` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `numero` INT NULL,
   `date_facturation` DATE NULL,
@@ -83,12 +73,12 @@ CREATE TABLE IF NOT EXISTS `COGIP`.`facture` (
   INDEX `fk_facture_societe1_idx` (`societe_id` ASC),
   CONSTRAINT `fk_facture_personne`
     FOREIGN KEY (`personne_id`)
-    REFERENCES `COGIP`.`personne` (`id`)
+    REFERENCES `id6935654_cogip`.`personne` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_facture_societe1`
     FOREIGN KEY (`societe_id`)
-    REFERENCES `COGIP`.`societe` (`id`)
+    REFERENCES `id6935654_cogip`.`societe` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
