@@ -11,6 +11,7 @@ $societes = $stmt->fetchAll();
 
 // les 5 dernières personnes
 $query = "SELECT
+personne.id,
 personne.nom,
 personne.prenom,
 personne.telephone,
@@ -26,6 +27,7 @@ $contacts = $stmt->fetchAll();
 
 // les 5 dernières factures
 $query = "SELECT
+facture.id,
 facture.numero,
 facture.date_facturation,
 facture.motif_prestation,
