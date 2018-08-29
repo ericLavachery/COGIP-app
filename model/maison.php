@@ -4,8 +4,8 @@
 $query = "SELECT *
 FROM societe, type_soc
 WHERE societe.type_soc_id = type_soc.id
-ORDER BY societe.id
-desc limit 5";
+ORDER BY societe.id DESC
+LIMIT 5";
 $stmt = $db->query($query);
 $societes = $stmt->fetchAll();
 
@@ -20,8 +20,8 @@ societe.nom AS nom_societe
 FROM
 personne
 LEFT JOIN societe ON personne.societe_id = societe.id
-ORDER BY personne.id
-DESC LIMIT 5";
+ORDER BY personne.id DESC
+LIMIT 5";
 $stmt = $db->query($query);
 $contacts = $stmt->fetchAll();
 
@@ -38,8 +38,8 @@ FROM
 facture
 LEFT JOIN societe ON facture.societe_id = societe.id
 LEFT JOIN personne ON facture.personne_id = personne.id
-ORDER BY facture.date_facturation
-DESC LIMIT 5";
+ORDER BY facture.date_facturation DESC
+LIMIT 5";
 $stmt = $db->query($query);
 $factures = $stmt->fetchAll();
 
