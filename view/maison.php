@@ -8,6 +8,7 @@
 <body>
     <h1><?= $titre ?></h1>
 
+    <h3>Sociétés</h3>
     <table>
         <tr>
             <td class="tabtitle">Société</td>
@@ -27,6 +28,7 @@
 
     <br>
 
+    <h3>Contacts</h3>
     <table>
         <tr>
             <td class="tabtitle">Nom</td>
@@ -46,6 +48,7 @@
 
     <br>
 
+    <h3>Factures</h3>
     <table>
         <tr>
             <td class="tabtitle">Numéro</td>
