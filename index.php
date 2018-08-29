@@ -1,3 +1,6 @@
+<?php
+require_once 'controller/router.php'
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -5,6 +8,6 @@
         <title></title>
     </head>
     <body>
-        societes_liste
+
     </body>
 </html>

@@ -1,0 +1,52 @@
+body {
+    padding: 10px 20px 10px 20px;
+    font-family: verdana, arial;
+    font-size: 17px;
+    color: #73857f;
+}
+label {
+    width: 160px;
+    display: inline-block;
+    margin: 5px 0;
+}
+input {
+    width: 300px;
+    display: inline-block;
+    margin: 5px 0;
+}
+select {
+    width: 315px;
+    display: inline-block;
+    margin: 5px 0;
+}
+.tabtitle {
+    padding: 0px 10px 10px 10px;
+    color: #178863;
+    font-weight: bold;
+}
+.tabrow {
+    padding: 0px 10px 0px 10px;
+}
+h1 {
+    color: #8a0032;
+    font-size: 30px;
+    font-weight: normal;
+    padding: 0;
+    margin-bottom: 14px;
+}
+h3 {
+    color: #178863;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.mauve {
+    color: #be0bb7;
+}
+.noir {
+    color: #000000;
+}
+.rouge {
+    color: #dd0f0f;
+}
