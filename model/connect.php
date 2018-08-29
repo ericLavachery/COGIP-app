@@ -1,7 +1,7 @@
 <?php
 // connection à la db par pdo
 try {
-    $servername = "databases.000webhost.com";
+    $servername = "localhost";
     $dbname = 'id6935654_cogip';
     $dbuser = 'id6935654_jcranu';
     $dbpwd = 'jcranu444719';
