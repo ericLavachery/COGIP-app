@@ -3,8 +3,7 @@
 try {
     $servername = "localhost";
     $dbname = "id6935654_cogip";
-    $dbuser = "root";
-    $dbpwd = "zen8070\$mysql";
+    include_once '007.php';
   	$dbConnection = "mysql:host=$servername;dbname=$dbname";
     $namesUFT8= array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
     $db = new PDO($dbConnection, $dbuser, $dbpwd, $namesUFT8);
