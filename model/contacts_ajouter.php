@@ -8,6 +8,7 @@ $phone = '';
 $email = '';
 $val_email = '';
 $societe = '';
+$message = '';
 
 $query = "SELECT nom,id
 FROM societe
@@ -25,14 +26,21 @@ if(isset($_POST['btn'])){
     $val_email = filter_var($email, FILTER_VALIDATE_EMAIL);
     $societe = $_POST['societe'];
     $btn_delete = isset($_POST['btn_delete']);
+   
 
     if(!empty($lname) && !empty($fname) && !empty($phone) && !empty($val_email)) {
         //insérer nouvelles données
         $add_value = $db->query
         ('INSERT INTO personne(nom, prenom, telephone, email, societe_id) VALUES("'.$lname.'", "'.$fname.'", "'.$phone.'", "'.$email.'", "'.$societe.'")');
-
+        $message = "Bien ouej JC";
+        $lname = '';
+        $fname = '';
+        $phone = '';
+        $email = '';
+        $val_email = '';
+        $societe = '';
     }else{
-
+        $message = "Tu crains JC";
     }
 }
 ?>

@@ -40,5 +40,8 @@
         </div>
     </form>
 
+    <div class="rouge">
+        <?= $message?>
+    </div>
 </body>
 </html>
