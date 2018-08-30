@@ -32,10 +32,10 @@
 
 		<div>
 			<label for="societe"> Société : </label>
-			<select>
-				<?php foreach ($societes as $key => $value){?>
+			<select name="societe">
 					<option></option>
-        			<option><?= $value['nom']?></option>
+				<?php foreach ($societes as $key => $value){?>
+        			<option value="<?= $value['id']?>"><?= $value['nom']?></option>
         		<?php } ?>
 			</select>
 		</div>
