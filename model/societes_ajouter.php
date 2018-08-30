@@ -23,7 +23,7 @@ if(isset($_POST['btn'])){
     if(!empty($nom) && !empty($adresse) && !empty($pays) && !empty($telephone) && !empty($tva)) {
         //insérer nouvelles données
         $add_value = $db->query
-        ('INSERT INTO societe(nom, adresse, telephone, pays, tva, type_soc_id) VALUES("'.$nom.'", "'.$adresse.'", "'.$telephone.'", "'.$pays.'", "'.$telephone.'", "'.$type_soc_id.'")');
+        ('INSERT INTO societe(nom, adresse, telephone, pays, tva, type_soc_id) VALUES("'.$nom.'", "'.$adresse.'", "'.$telephone.'", "'.$pays.'", "'.$tva.'", "'.$type_soc_id.'")');
         $nom = '';
         $adresse = '';
         $pays = '';
