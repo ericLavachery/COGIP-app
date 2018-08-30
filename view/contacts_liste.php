@@ -10,6 +10,13 @@
     <h1><?= $titre ?></h1>
 
     <table>
+        <tr>
+            <td class="tabtitle">Nom</td>
+            <td class="tabtitle">Prénom</td>
+            <td class="tabtitle">Société</td>
+            <td class="tabtitle">Téléphone</td>
+            <td class="tabtitle">Email</td>
+        </tr>
         <?php foreach ($personnes as $key => $value){?>
             <tr>
                 <td class="tabrow"><a href="index.php?page=lesgens_detail&id=<?=$value['id']?>"><?=$value['nom']?></a></td>
@@ -20,6 +27,7 @@
             </tr>
         <?php } ?>
     </table>
+    <a href="index.php?page=lesgens_ajouter"><button type="button" name="button">Ajouter</button></a>
 
 </body>
 </html>
