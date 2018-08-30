@@ -15,6 +15,7 @@ $query =
   FROM facture, type_soc, personne, societe
   WHERE facture.societe_id = societe.id
   AND facture.personne_id = personne.id
+  AND societe.type_soc_id = type_soc.id
   AND facture.id = $idfacture
   ORDER BY facture.date_facturation";
 $stmt = $db->query($query);

@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1><?= $titre ?></h1>
+    Motif de la prestation : <?=$factures['motif_prestation']?><br>
     Facture numéro: <?=$factures['numero']?><br>
     Date: <?=$factures['date_facturation']?><br>
     Nom de la société: <a href="index.php?page=lesboites_detail&id=<?=$factures['id_societe']?>"><?=$factures['nom_societe']?></a><br>
