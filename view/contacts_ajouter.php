@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="view/css/style.css">
-    <title></title>
+    <title><?= $titre ?></title>
 </head>
 <body>
     <h1><?= $titre ?></h1>
