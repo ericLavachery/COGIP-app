@@ -9,6 +9,10 @@
     <h1><?= $titre ?></h1>
 
     <h3>Sociétés</h3>
+    <a href="index.php?page=lesboites_liste&ctype=cln"><button type="button" name="button">Clients</button></a>
+    <a href="index.php?page=lesboites_liste&ctype=frn"><button type="button" name="button">Fournisseurs</button></a>
+    <br><br>
+    
     <table>
         <tr>
             <td class="tabtitle">Société</td>

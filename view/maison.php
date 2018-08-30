@@ -26,6 +26,9 @@
             </tr>
         <?php } ?>
     </table>
+    <a href="index.php?page=lesboites_liste"><button type="button" name="button">Toutes les sociétés</button></a>
+    <a href="index.php?page=lesboites_liste&ctype=cln"><button type="button" name="button">Clients</button></a>
+    <a href="index.php?page=lesboites_liste&ctype=frn"><button type="button" name="button">Fournisseurs</button></a>
 
     <br>
 
@@ -46,6 +49,7 @@
             </tr>
         <?php } ?>
     </table>
+    <a href="index.php?page=lesgens_liste"><button type="button" name="button">Tous les contacts</button></a>
 
     <br>
 
@@ -68,6 +72,7 @@
             </tr>
         <?php } ?>
     </table>
+    <a href="index.php?page=lepognon_liste"><button type="button" name="button">Toutes les factures</button></a>
 
 </body>
 </html>
