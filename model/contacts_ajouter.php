@@ -11,7 +11,6 @@ $societes = $stmt->fetchAll();
 
 // Si utilisation du bouton "Ajouter dans le contact"
     if(isset($_POST['btn'])){
-      var_dump($_POST);
         $lname = filter_var($_POST['nom'], FILTER_SANITIZE_STRING);
         $fname = filter_var($_POST['prenom'], FILTER_SANITIZE_STRING);
         $phone = filter_var($_POST['telephone'], FILTER_SANITIZE_NUMBER_INT);
