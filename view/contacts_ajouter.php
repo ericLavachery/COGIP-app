@@ -41,7 +41,7 @@
     </form>
 
     <div class="rouge">
-        <?= $message?>
+        <?= $message ?>
     </div>
 </body>
 </html>
