@@ -1,14 +1,13 @@
 <?php
 // require_once('connect.php');
 $titre = "Nouveau contact";
-
 $lname = '';
 $fname = '';
 $phone = '';
 $email = '';
 $val_email = '';
 $societe = '';
-$message = '';
+$message = ''; 
 
 $query = "SELECT nom,id
 FROM societe
@@ -32,13 +31,15 @@ if(isset($_POST['btn'])){
         //insérer nouvelles données
         $add_value = $db->query
         ('INSERT INTO personne(nom, prenom, telephone, email, societe_id) VALUES("'.$lname.'", "'.$fname.'", "'.$phone.'", "'.$email.'", "'.$societe.'")');
-        $message = "Bien ouej JC";
         $lname = '';
         $fname = '';
         $phone = '';
         $email = '';
         $val_email = '';
         $societe = '';
+        $message = '';
+
+        $message = "Bien ouej JC";
     }else{
         $message = "Tu crains JC";
     }
