@@ -19,9 +19,16 @@ ORDER BY personne.prenom";
 $stmt = $db->query($query);
 $contacts = $stmt->fetchAll();
 
-// liste contacts
+// liste factures
 $query =
-"SELECT *
+"SELECT
+facture.date_facturation,
+facture.numero,
+facture.motif_prestation,
+facture.id,
+personne.id AS id_personne,
+personne.prenom,
+personne.nom
 FROM facture, personne
 WHERE personne.id = facture.personne_id
 AND facture.societe_id = $idsociete
