@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -18,7 +19,7 @@
         </tr>
         <?php foreach ($societes as $key => $value){?>
             <tr>
-                <td class="tabrow"><?=$value['nom']?></td>
+                <td class="tabrow"><a href="index.php?page=lesboites_detail&id=<?=$value['id']?>"><?=$value['nom']?></a></td>
                 <td class="tabrow"><?=$value['type']?></td>
                 <td class="tabrow"><?=$value['telephone']?></td>
                 <td class="tabrow"><?=$value['tva']?></td>
@@ -38,7 +39,7 @@
         </tr>
         <?php foreach ($contacts as $key => $value){?>
             <tr>
-                <td class="tabrow"><?=$value['prenom']?> <?=$value['nom']?></td>
+                <td class="tabrow"><a href="index.php?page=lesgens_detail&id=<?=$value['id']?>"><?=$value['prenom']?> <?=$value['nom']?></a></td>
                 <td class="tabrow"><?=$value['nom_societe']?></td>
                 <td class="tabrow"><?=$value['telephone']?></td>
                 <td class="tabrow"><?=$value['email']?></td>
@@ -59,7 +60,7 @@
         </tr>
         <?php foreach ($factures as $key => $value){?>
             <tr>
-                <td class="tabrow"><?=$value['numero']?></td>
+                <td class="tabrow"><a href="index.php?page=lepognon_detail&id=<?=$value['id']?>"><?=$value['numero']?></a></td>
                 <td class="tabrow"><?=$value['nom_societe']?></td>
                 <td class="tabrow"><?=$value['date_facturation']?></td>
                 <td class="tabrow"><?=$value['motif_prestation']?></td>

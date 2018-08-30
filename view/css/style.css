@@ -27,6 +27,14 @@ select {
 .tabrow {
     padding: 0px 10px 0px 10px;
 }
+.tabrow a {
+    text-decoration: none;
+    color: #8a8800;
+}
+.tabrow a:hover {
+    text-decoration: none;
+    color: #8a0032;
+}
 h1 {
     color: #8a0032;
     font-size: 30px;
