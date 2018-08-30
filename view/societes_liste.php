@@ -9,21 +9,9 @@
     <h1><?= $titre ?></h1>
 
     <h3>Sociétés</h3>
-    <?php if ($ctype != ''): ?>
         <a href="index.php?page=lesboites_liste"><button type="button" name="button">Toutes les sociétés</button></a>
-    <?php else: ?>
-        <button type="button" name="button">Toutes les sociétés</button>
-    <?php endif; ?>
-    <?php if ($ctype != 'cln'): ?>
         <a href="index.php?page=lesboites_liste&ctype=cln"><button type="button" name="button">Clients</button></a>
-    <?php else: ?>
-        <button type="button" name="button">Clients</button>
-    <?php endif; ?>
-    <?php if ($ctype != 'frn'): ?>
         <a href="index.php?page=lesboites_liste&ctype=frn"><button type="button" name="button">Fournisseurs</button></a>
-    <?php else: ?>
-        <button type="button" name="button">Fournisseurs</button>
-    <?php endif; ?>
 
     <br><br>
 
@@ -43,6 +31,7 @@
             </tr>
         <?php } ?>
     </table>
+    <a href="index.php?page=lesboites_ajouter"><button type="button" name="button">Ajouter</button></a>
 
 </body>
 </html>

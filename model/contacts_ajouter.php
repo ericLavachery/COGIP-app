@@ -1,6 +1,4 @@
 <?php
-// require_once('connect.php');
-$titre = "Nouveau contact";
 $lname = '';
 $fname = '';
 $phone = '';
@@ -40,4 +38,5 @@ if(isset($_POST['btn'])){
         $message = "Tu crains JC";
     }
 }
+$titre = "Nouveau contact";
 ?>
