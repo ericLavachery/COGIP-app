@@ -2,12 +2,13 @@ body {
     padding: 10px 20px 10px 20px;
     font-family: verdana, arial;
     font-size: 17px;
-    color: #73857f;
+    color: #637e75;
 }
 label {
     width: 160px;
     display: inline-block;
     margin: 5px 0;
+    vertical-align: top;
 }
 input {
     width: 300px;
@@ -19,9 +20,18 @@ select {
     display: inline-block;
     margin: 5px 0;
 }
-button {
+textarea {
+    width: 310px;
+    display: inline-block;
+    margin: 5px 0;
+}
+.form button {
     margin-top: 10px;
     margin-right: 20px;
+}
+.navig button {
+    display: block;
+    margin: auto;
 }
 .tabtitle {
     padding: 0px 10px 5px 10px;
@@ -39,6 +49,22 @@ button {
     text-decoration: none;
     color: #8a0032;
 }
+.detailtitle {
+    width: 300px;
+    color: rgba(99, 126, 117, 0.6);
+}
+p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+p a {
+    text-decoration: none;
+    color: #8a8800;
+}
+p a:hover {
+    text-decoration: none;
+    color: #8a0032;
+}
 h1 {
     color: #8a0032;
     font-size: 30px;
@@ -53,6 +79,14 @@ h3 {
     padding: 0;
     margin-bottom: 10px;
 }
+h3 a {
+    color: #178863;
+    text-decoration: none;
+}
+h3 a:hover{
+    text-decoration: none;
+    color: #8a0032;
+}
 .mauve {
     color: #be0bb7;
 }
@@ -61,4 +95,22 @@ h3 {
 }
 .rouge {
     color: #dd0f0f;
+}
+.actif {
+    border-style: solid;
+    border-color: #8a8800;
+    border-width: 2px;
+    display: inline-block;
+    margin: auto;
+    padding: 3px;
+    border-radius: 50%;
+}
+.passif {
+    border-style: solid;
+    border-color: rgba(99, 126, 117, 0.3);
+    border-width: 2px;
+    display: inline-block;
+    margin: auto;
+    padding: 3px;
+    border-radius: 50%;
 }

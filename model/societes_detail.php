@@ -37,5 +37,5 @@ $stmt = $db->query($query);
 $factures = $stmt->fetchAll();
 
 // Titre de la page
-$titre = "COGIP : " . $societe['nom'];
+$titre = $societe['nom'];
 ?>
