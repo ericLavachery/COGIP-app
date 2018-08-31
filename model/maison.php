@@ -43,6 +43,20 @@ LIMIT 5";
 $stmt = $db->query($query);
 $factures = $stmt->fetchAll();
 
+// petit message pour les $admins
+if ($admin_name != '') {
+    if ($admin_name == 'Jean-Christian Ranu') {
+        $admin_message = 'Salut JC ça boume ?';
+    } elseif ($admin_name == 'Muriel Perrache') {
+        $admin_message = "Salut Mumu, t'as la super patate ?";
+    } else {
+        $admin_message = 'Bienvenue sur le site de la COGIP, ' . $admin_name;
+    }
+} else {
+    $admin_message = '';
+}
+
+
 // Titre de la page
 $titre="Accueil";
  ?>

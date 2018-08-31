@@ -15,7 +15,7 @@
         </div>
         <div>
             <label for="date_facturation">Date : </label>
-            <input type="text" name="date_facturation" value="<?= $date_facturation ?>" required placeholder="AAAA-MM-JJ">
+            <input type="date" name="date_facturation" value="<?= $date_facturation ?>" required>
         </div>
         <div>
             <label for="motif_prestation">Prestation : </label>

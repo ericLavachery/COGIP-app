@@ -14,6 +14,8 @@ if (isset($_POST['login']) && isset($_POST['pwd'])) {
     foreach ($admins as $key => $value) {
         if ($value['login'] == $_POST['login'] && $value['pwd'] == sha1($_POST['pwd'])) {
             $log = TRUE;
+            $adname = $value['nom'];
+            $adaccess = $value['access'];
         }
     }
 
@@ -22,6 +24,8 @@ if (isset($_POST['login']) && isset($_POST['pwd'])) {
         session_start ();
         $_SESSION['login'] = $_POST['login'];
         $_SESSION['pwd'] = $_POST['pwd'];
+        $_SESSION['access'] = $adaccess;
+        $_SESSION['nom'] = $adname;
         // on redirige notre visiteur
         header ('location: index.php');
     }

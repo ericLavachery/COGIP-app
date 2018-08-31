@@ -2,8 +2,17 @@
 session_start ();
 if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
     $log = TRUE;
+    if (isset($_SESSION['access'])) {
+        $admin_level = $_SESSION['access'];
+        $admin_name = $_SESSION['nom'];
+    } else {
+        $admin_level = '';
+        $admin_name = 'Visiteur';
+    }
 } else {
     $log = FALSE;
+    $admin_level = '';
+    $admin_name = 'Visiteur';
 }
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
