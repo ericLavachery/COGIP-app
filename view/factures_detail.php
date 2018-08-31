@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="view/css/style.css">
-    <title></title>
+    <title>COGIP : <?= $titre ?></title>
 </head>
-<body>
+<body><?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
-    Motif de la prestation : <?=$factures['motif_prestation']?><br>
-    Facture numéro: <?=$factures['numero']?><br>
-    Date: <?=$factures['date_facturation']?><br>
-    Nom de la société: <a href="index.php?page=lesboites_detail&id=<?=$factures['id_societe']?>"><?=$factures['nom_societe']?></a><br>
-    Type de la société: <?=$factures['type']?><br>
-    Personne de contact: <a href="index.php?page=lesgens_detail&id=<?=$factures['id_personne']?>"><?=$factures['prenom_contact']?> <?=$factures['nom_contact']?></a>
+
+    <h3><?=$factures['type']?> : <a href="index.php?page=lesboites_detail&id=<?=$factures['id_societe']?>"><?=$factures['nom_societe']?></a></h3>
+    <p><span class="detailtitle">Prestation :</span> <?=$factures['motif_prestation']?></p>
+    <p><span class="detailtitle">Date de facturation :</span> <?=$factures['date_facturation']?></p>
+    <p><span class="detailtitle">Personne de contact :</span> <a href="index.php?page=lesgens_detail&id=<?=$factures['id_personne']?>"><?=$factures['prenom_contact']?> <?=$factures['nom_contact']?></a></p>
+
+    <a href="index.php?page=lepognon_modifier&id=<?=$idfacture?>"><button class="form" type="button" name="button">Modifier</button></a>
+    <a href="index.php?page=lepognon_modifier&id=<?=$idfacture?>"><button class="form" type="button" name="button">Supprimer</button></a>
 
 </body>
 </html>

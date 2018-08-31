@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="view/css/style.css">
-    <title><?= $titre ?></title>
+    <title>COGIP : <?= $titre ?></title>
 </head>
-<body>
+<body><?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
 
     <h3>Sociétés</h3>
@@ -26,9 +26,9 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lesboites_liste"><button type="button" name="button">Toutes les sociétés</button></a>
-    <a href="index.php?page=lesboites_liste&ctype=cln"><button type="button" name="button">Clients</button></a>
-    <a href="index.php?page=lesboites_liste&ctype=frn"><button type="button" name="button">Fournisseurs</button></a>
+    <a href="index.php?page=lesboites_liste"><button class="form" type="button" name="button">Toutes les sociétés</button></a>
+    <a href="index.php?page=lesboites_liste&ctype=cln"><button class="form" type="button" name="button">Clients</button></a>
+    <a href="index.php?page=lesboites_liste&ctype=frn"><button class="form" type="button" name="button">Fournisseurs</button></a>
 
     <br>
 
@@ -49,7 +49,7 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lesgens_liste"><button type="button" name="button">Tous les contacts</button></a>
+    <a href="index.php?page=lesgens_liste"><button class="form" type="button" name="button">Tous les contacts</button></a>
 
     <br>
 
@@ -72,7 +72,7 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lepognon_liste"><button type="button" name="button">Toutes les factures</button></a>
+    <a href="index.php?page=lepognon_liste"><button class="form" type="button" name="button">Toutes les factures</button></a>
 
 </body>
 </html>

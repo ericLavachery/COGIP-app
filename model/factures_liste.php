@@ -16,5 +16,5 @@ DESC";
 $stmt = $db->query($query);
 $factures = $stmt->fetchAll();
 // Titre de la page
-$titre="COGIP : Factures";
+$titre="Factures";
  ?>

@@ -20,6 +20,7 @@ $query =
   ORDER BY facture.date_facturation";
 $stmt = $db->query($query);
 $factures = $stmt->fetch();
+
 // Titre de la page
-$titre="COGIP : Détail de la facture";
+$titre="Facture " . $factures['numero'];
  ?>

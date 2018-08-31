@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="view/css/style.css">
-    <title></title>
+    <title>COGIP : <?= $titre ?></title>
 </head>
-<body>
+<body><?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
 
    <form action="" method="post">
         <div>
             <label for="prenom">Prenom : </label>
-            <input type="text" name="prenom" value="<?= $personnes['prenom'] ?>" required>
+            <input type="text" name="prenom" value="<?= $prenom ?>" required>
         </div>
         <div>
             <label for="nom">Nom : </label>
-            <input type="text" name="nom" value="<?= $personnes['nom'] ?>" required>
+            <input type="text" name="nom" value="<?= $nom ?>" required>
         </div>
         <div>
             <label for="telephone">Téléphone : </label>
-            <input type="text" name="telephone" value="<?= $personnes['telephone'] ?>" required>
+            <input type="text" name="telephone" value="<?= $telephone ?>" required>
         </div>
         <div>
             <label for="bas"> email : </label>
-            <input type="email" name="email" value="<?= $personnes['email'] ?>" required>
+            <input type="email" name="email" value="<?= $email ?>" required>
         </div>
         <div>
-            <label for="societe"> Société : </label>
-            <select name="societe" required>
+            <label for="id_societe"> Société : </label>
+            <select name="id_societe" required>
                 <option value="" selected></option>
                 <?php foreach ($societes as $key => $value){?>
-                    <option value="<?= $value['id']?>"<?php if ($personnes['id_societe'] == $value['id']) {echo ' selected';}; ?>><?= $value['nom']?></option>
+                    <option value="<?= $value['id']?>"<?php if ($societe_id == $value['id']) {echo ' selected';}; ?>><?= $value['nom']?></option>
                 <?php } ?>
             </select>
         </div>
@@ -39,8 +39,10 @@
             <button type="submit" name="btn"> Modifier le contact</button>
         </div>
     </form>
-    
+
+    <div class="rouge">
+        <?= $message ?>
+    </div>
 
 </body>
 </html>
-

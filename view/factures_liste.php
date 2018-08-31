@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="view/css/style.css">
-    <title></title>
+    <title>COGIP : <?= $titre ?></title>
 </head>
-<body>
+<body><?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
 
     <table>
@@ -24,7 +24,7 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lepognon_ajouter"><button type="button" name="button">Ajouter</button></a>
+    <a href="index.php?page=lepognon_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>
 
 </body>
 </html>
