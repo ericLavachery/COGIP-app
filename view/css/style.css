@@ -8,6 +8,7 @@ label {
     width: 160px;
     display: inline-block;
     margin: 5px 0;
+    vertical-align: top;
 }
 input {
     width: 300px;
@@ -16,6 +17,11 @@ input {
 }
 select {
     width: 315px;
+    display: inline-block;
+    margin: 5px 0;
+}
+textarea {
+    width: 310px;
     display: inline-block;
     margin: 5px 0;
 }
@@ -92,17 +98,19 @@ h3 a:hover{
 }
 .actif {
     border-style: solid;
-    border-color: #8a0032;
+    border-color: #8a8800;
     border-width: 2px;
     display: inline-block;
     margin: auto;
     padding: 3px;
+    border-radius: 50%;
 }
 .passif {
     border-style: solid;
-    border-color: #e8e8e8;
+    border-color: rgba(99, 126, 117, 0.3);
     border-width: 2px;
     display: inline-block;
     margin: auto;
     padding: 3px;
+    border-radius: 50%;
 }

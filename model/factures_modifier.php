@@ -15,32 +15,42 @@ $numero = $facture['numero'];
 $date_facturation = $facture['date_facturation'];
 $motif_prestation = $facture['motif_prestation'];
 $personne_id = $facture['personne_id'];
+$societe_id = $facture['societe_id'];
 
 //contacts
 $query =
-"SELECT nom, prenom, id
-FROM personne";
+"SELECT
+personne.nom,
+personne.prenom,
+personne.id,
+societe.nom AS nom_societe,
+societe.id AS id_societe
+FROM personne, societe
+WHERE personne.societe_id = societe.id
+ORDER BY societe.nom, personne.nom";
 $stmt = $db->query($query);
 $contacts = $stmt->fetchAll();
 
-
-
-
-
-
 // Si utilisation du bouton MODIFIER
 if(isset($_POST['btn'])){
-    $nom = filter_var($_POST['nom'], FILTER_SANITIZE_STRING);
-    $adresse = filter_var($_POST['adresse'], FILTER_SANITIZE_STRING);
-    $pays = filter_var($_POST['pays'], FILTER_SANITIZE_STRING);
-    $telephone = filter_var($_POST['telephone'], FILTER_SANITIZE_NUMBER_INT);
-    $tva = filter_var($_POST['tva'], FILTER_SANITIZE_STRING);
-    $type_soc_id = $_POST['type_soc_id'];
+    $date_facturation = filter_var($_POST['date_facturation'], FILTER_SANITIZE_STRING);
+    $numero = filter_var($_POST['numero'], FILTER_SANITIZE_NUMBER_INT);
+    $motif_prestation = filter_var($_POST['motif_prestation'], FILTER_SANITIZE_STRING);
+    $personne_id = $_POST['personne_id'];
 
-    if(!empty($nom) && !empty($adresse) && !empty($pays) && !empty($telephone) && !empty($tva) && !empty($type_soc_id)) {
+    // va chercher la société du contact
+    $query = "SELECT *
+    FROM personne
+    WHERE id = $personne_id";
+    $stmt = $db->query($query);
+    $societe = $stmt->fetch();
+
+    $societe_id = $societe['societe_id'];
+
+    if(!empty($date_facturation) && !empty($numero) && !empty($motif_prestation) && !empty($personne_id)) {
         //changer données
 		$db->beginTransaction();
-		$db->exec("UPDATE societe SET nom='$nom',adresse='$adresse',telephone='$telephone',pays='$pays',tva='$tva',type_soc_id='$type_soc_id' WHERE id = $idsociete; ");
+		$db->exec("UPDATE facture SET date_facturation='$date_facturation',numero='$numero',motif_prestation='$motif_prestation',personne_id='$personne_id',societe_id='$societe_id' WHERE id = $idfacture; ");
 		$db->commit();
 
         $message = "Bien ouej JC";
