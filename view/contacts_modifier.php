@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="view/css/style.css">
-    <title></title>
+    <title><?= $titre ?></title>
 </head>
 <body><?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
@@ -39,8 +39,7 @@
             <button type="submit" name="btn"> Modifier le contact</button>
         </div>
     </form>
-    
+
 
 </body>
 </html>
-
