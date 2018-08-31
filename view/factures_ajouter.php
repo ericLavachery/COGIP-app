@@ -3,22 +3,22 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="view/css/style.css">
-    <title><?= $titre ?></title>
+    <title>COGIP : <?= $titre ?></title>
 </head>
-<body>
+<body><?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
 
     <form action="" method="post">
         <div>
-            <label for="numero">Numéro de la facture : </label>
+            <label for="numero">Numéro : </label>
             <input type="text" name="numero" value="<?= $nmro ?>" required>
         </div>
         <div>
-            <label for="date_facturation">Date de facturation : </label>
+            <label for="date_facturation">Date : </label>
             <input type="date" name="date_facturation" value="<?= $datef ?>" required>
         </div>
         <div>
-            <label for="motif_prestation">Motif de la prestation : </label>
+            <label for="motif_prestation">Motif : </label>
             <input type="text" name="motif_prestation" value="<?= $motif ?>" required>
         </div>
         <div>
@@ -35,7 +35,7 @@
             <select name="personne_id" required>
                 <option value="" selected></option>
                 <?php foreach ($personnes as $key => $value){?>
-                    <option value="<?= $value['id']?>"<?php if ($personne == $value['id']) {echo ' selected';}; ?>><?= $value['prenom']?><?= $value['nom']?></option>
+                    <option value="<?= $value['id']?>"<?php if ($personne == $value['id']) {echo ' selected';}; ?>><?= $value['prenom']?> <?= $value['nom']?></option>
                 <?php } ?>
             </select>
         </div>
