@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="view/css/style.css">
     <title><?= $titre ?></title>
 </head>
-<body>
+<body><?php include '_navig.php' ?><?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
 
     <h3>Sociétés</h3>
