@@ -1,4 +1,10 @@
 <?php
+session_start ();
+if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
+    $log = TRUE;
+} else {
+    $log = FALSE;
+}
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
     // info page => redirige vers la page
@@ -13,8 +19,10 @@ if (isset($_GET['page'])) {
         $fichier = str_replace("lepognon", "factures", $page);
     } elseif (strpos($page, 'lesboss') === 0) {
         $fichier = str_replace("lesboss", "admins", $page);
-    } elseif ($page = 'accueil') {
+    } elseif ($page == 'accueil') {
         $fichier = 'maison';
+    } elseif ($page == 'connection') {
+        $fichier = 'login';
     } else {
         $fichier = 'maison';
     }

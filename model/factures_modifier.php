@@ -44,7 +44,7 @@ if(isset($_POST['btn'])){
     WHERE id = $personne_id";
     $stmt = $db->query($query);
     $societe = $stmt->fetch();
-
+    // que voili
     $societe_id = $societe['societe_id'];
 
     if(!empty($date_facturation) && !empty($numero) && !empty($motif_prestation) && !empty($personne_id)) {
