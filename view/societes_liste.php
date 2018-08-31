@@ -9,9 +9,9 @@
     <h1><?= $titre ?></h1>
 
     <h3>Sociétés</h3>
-        <a href="index.php?page=lesboites_liste"><button type="button" name="button">Toutes les sociétés</button></a>
-        <a href="index.php?page=lesboites_liste&ctype=cln"><button type="button" name="button">Clients</button></a>
-        <a href="index.php?page=lesboites_liste&ctype=frn"><button type="button" name="button">Fournisseurs</button></a>
+        <a href="index.php?page=lesboites_liste"><button class="form" type="button" name="button">Toutes les sociétés</button></a>
+        <a href="index.php?page=lesboites_liste&ctype=cln"><button class="form" type="button" name="button">Clients</button></a>
+        <a href="index.php?page=lesboites_liste&ctype=frn"><button class="form" type="button" name="button">Fournisseurs</button></a>
 
     <br><br>
 
@@ -31,7 +31,7 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lesboites_ajouter"><button type="button" name="button">Ajouter</button></a>
+    <a href="index.php?page=lesboites_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>
 
 </body>
 </html>

@@ -1,14 +1,14 @@
 <?php
 	$idcontact=$_GET['id'];
-	// personnes 
+	// personnes
 	$query =
-		"SELECT 
+		"SELECT
 		personne.id,
-		personne.nom, 
-		personne.prenom, 
-		personne.telephone, 
-		personne.email, 
-		societe.nom AS nom_societe, 
+		personne.nom,
+		personne.prenom,
+		personne.telephone,
+		personne.email,
+		societe.nom AS nom_societe,
 		societe.adresse AS adresse_societe,
 		societe.id AS id_societe
 		FROM personne, societe
@@ -16,13 +16,11 @@
 		AND personne.id = $idcontact";
 
 	$personnes = $db->query($query)->fetch();
-	$titre = "COGIP - Modification fiche contact de ". $personnes['nom']. " " . $personnes['prenom'];
+	$titre = "Modification fiche contact de ". $personnes['nom']. " " . $personnes['prenom'];
 
 	//societes
-
-	$query = 
+	$query =
 	"SELECT nom, id
 	 FROM societe";
 	$stmt = $db->query($query);
 	$societes = $stmt->fetchAll();
-

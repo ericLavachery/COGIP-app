@@ -7,8 +7,8 @@
 </head>
 <body><?php include '_navig.php' ?>
     <h1><?= $societe['nom'] ?></h1>
-    <a href="index.php?page=lesboites_modifier&id=<?=$idsociete?>"><button type="button" name="button">Modifier</button></a>
-    <a href="index.php?page=lesboites_modifier&id=<?=$idsociete?>"><button type="button" name="button">Supprimer</button></a>
+    <a href="index.php?page=lesboites_modifier&id=<?=$idsociete?>"><button class="form" type="button" name="button">Modifier</button></a>
+    <a href="index.php?page=lesboites_modifier&id=<?=$idsociete?>"><button class="form" type="button" name="button">Supprimer</button></a>
     <br>
 
     <br>

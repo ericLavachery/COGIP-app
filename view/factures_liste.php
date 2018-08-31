@@ -24,7 +24,7 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lepognon_ajouter"><button type="button" name="button">Ajouter</button></a>
+    <a href="index.php?page=lepognon_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>
 
 </body>
 </html>

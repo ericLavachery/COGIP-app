@@ -15,5 +15,5 @@ ORDER BY personne.nom";
 $stmt = $db->query($query);
 $personnes = $stmt->fetchAll();
 // Titre de la page
-$titre="Bienvenue dans l'annuaire de COGIP";
+$titre="Contacts";
  ?>

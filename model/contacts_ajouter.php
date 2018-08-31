@@ -1,10 +1,10 @@
 <?php
-$lname = '';
-$fname = '';
-$phone = '';
+$nom = '';
+$prenom = '';
+$telephone = '';
 $email = '';
 $val_email = '';
-$societe = '';
+$societe_id = '';
 $message = '';
 
 $query = "SELECT nom,id
@@ -16,27 +16,27 @@ $societes = $stmt->fetchAll();
 
 // Si utilisation du bouton "Ajouter dans le contact"
 if(isset($_POST['btn'])){
-    $lname = filter_var($_POST['nom'], FILTER_SANITIZE_STRING);
-    $fname = filter_var($_POST['prenom'], FILTER_SANITIZE_STRING);
-    $phone = filter_var($_POST['telephone'], FILTER_SANITIZE_NUMBER_INT);
+    $nom = filter_var($_POST['nom'], FILTER_SANITIZE_STRING);
+    $prenom = filter_var($_POST['prenom'], FILTER_SANITIZE_STRING);
+    $telephone = filter_var($_POST['telephone'], FILTER_SANITIZE_NUMBER_INT);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $val_email = filter_var($email, FILTER_VALIDATE_EMAIL);
-    $societe = $_POST['societe'];
+    $societe_id = $_POST['societe_id'];
 
-    if(!empty($lname) && !empty($fname) && !empty($phone) && !empty($val_email)) {
+    if(!empty($nom) && !empty($prenom) && !empty($telephone) && !empty($val_email)) {
         //insérer nouvelles données
         $add_value = $db->query
-        ('INSERT INTO personne(nom, prenom, telephone, email, societe_id) VALUES("'.$lname.'", "'.$fname.'", "'.$phone.'", "'.$email.'", "'.$societe.'")');
-        $lname = '';
-        $fname = '';
-        $phone = '';
+        ('INSERT INTO personne(nom, prenom, telephone, email, societe_id) VALUES("'.$nom.'", "'.$prenom.'", "'.$telephone.'", "'.$email.'", "'.$societe_id.'")');
+        $nom = '';
+        $prenom = '';
+        $telephone = '';
         $email = '';
         $val_email = '';
-        $societe = '';
+        $societe_id = '';
         $message = "Bien ouej JC";
     }else{
         $message = "Tu crains JC";
     }
 }
-$titre = "Nouveau contact";
+$titre = "COGIP : Nouveau contact";
 ?>

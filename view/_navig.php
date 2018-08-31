@@ -1,3 +1,3 @@
-<a href="?page=lesboites_liste"><button type="button" name="button">Sociétés</button></a>
-<a href="?page=lesgens_liste"><button type="button" name="button">Contacts</button></a>
-<a href="?page=lepognon_liste"><button type="button" name="button">Factures</button></a>
+<span class="<?php if (strpos($page, 'lesboites') === 0) {echo 'actif';} else {echo 'passif';} ?>"><a href="?page=lesboites_liste"><button class="navig" type="button" name="button">Sociétés</button></a></span>
+<span class="<?php if (strpos($page, 'lesgens') === 0) {echo 'actif';} else {echo 'passif';} ?>"><a href="?page=lesgens_liste"><button class="navig" type="button" name="button">Contacts</button></a></span>
+<span class="<?php if (strpos($page, 'lepognon') === 0) {echo 'actif';} else {echo 'passif';} ?>"><a href="?page=lepognon_liste"><button class="navig" type="button" name="button">Factures</button></a></span>
