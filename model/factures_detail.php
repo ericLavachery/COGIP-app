@@ -22,5 +22,5 @@ $stmt = $db->query($query);
 $factures = $stmt->fetch();
 
 // Titre de la page
-$titre="COGIP : Facture " . $factures['numero'];
+$titre="Facture " . $factures['numero'];
  ?>

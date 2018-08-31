@@ -38,5 +38,5 @@ if(isset($_POST['btn'])){
         $message = "Tu crains JC";
     }
 }
-$titre = "COGIP : Nouveau contact";
+$titre = "Nouveau contact";
 ?>

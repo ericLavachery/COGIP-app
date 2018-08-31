@@ -22,6 +22,7 @@ if (isset($_GET['page'])) {
     require_once 'view/'.$fichier.'.php';
 } else {
     // pas d'infos => on va à la maison
+    $page = '';
     require_once 'model/maison.php';
     require_once 'view/maison.php';
 }

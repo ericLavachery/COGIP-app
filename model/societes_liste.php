@@ -49,5 +49,5 @@ $stmt = $db->query($query);
 $societes = $stmt->fetchAll();
 
 // Titre de la page
-$titre="COGIP : Sociétés";
+$titre="Sociétés";
  ?>
