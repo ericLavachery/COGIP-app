@@ -16,7 +16,7 @@
     <?php if ($admin_level === 'god'): ?>
         <br>
         <a href="index.php?page=lepognon_modifier&id=<?=$idfacture?>"><button class="form" type="button" name="button">Modifier</button></a>
-        <a href="index.php?page=lepognon_modifier&id=<?=$idfacture?>"><button class="form" type="button" name="button">Supprimer</button></a>
+        <a href="index.php?page=lepognon_supprimer&id=<?=$idfacture?>"><button class="form" type="button" name="button">Supprimer</button></a>
     <?php endif; ?>
 
 

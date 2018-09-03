@@ -9,7 +9,7 @@
     <?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
 
-<h3><?=$personnes['nom_societe']?></h3>
+    <h3><?=$personnes['nom_societe']?></h3>
 
     Tél : <?=$personnes['telephone']?><br>
     Email : <?=$personnes['email']?><br>
@@ -21,7 +21,7 @@
             <td class="tabtitle">Date</td>
             <td class="tabtitle">Prestation</td>
         </tr>
-      <?php foreach ($factures as $key => $value){?>
+        <?php foreach ($factures as $key => $value){?>
             <tr>
                 <td class="tabrow"><?=$value['numero']?></td>
                 <td class="tabrow"><?=$value['date_facturation']?></td>
@@ -30,12 +30,9 @@
         <?php } ?>
     </table>
     <br>
-     <a href="?page=lesgens_supprimer&id=<?=$idcontact?>"><button type="button" name="button">Supprimer le contact</button></a>
-
-     <div class="rouge">
+    <div class="rouge">
         <?= $message ?>
-         
-     </div>
+    </div>
 
 </body>
 </html>
