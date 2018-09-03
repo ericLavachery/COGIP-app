@@ -114,3 +114,10 @@ h3 a:hover{
     padding: 3px;
     border-radius: 50%;
 }
+.notes {
+    color: #be0bb7;
+    font-size: 12px;
+}
+.subnav {
+    margin: 7px 0 7px 0;
+}

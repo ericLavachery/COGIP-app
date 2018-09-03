@@ -7,8 +7,6 @@
 </head>
 <body><?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
-
-    <h3>Sociétés</h3>
         <a href="index.php?page=lesboites_liste"><button class="form" type="button" name="button">Toutes les sociétés</button></a>
         <a href="index.php?page=lesboites_liste&ctype=cln"><button class="form" type="button" name="button">Clients</button></a>
         <a href="index.php?page=lesboites_liste&ctype=frn"><button class="form" type="button" name="button">Fournisseurs</button></a>
@@ -31,7 +29,12 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lesboites_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>
+
+    <?php if ($admin_level != ''): ?>
+        <div class="subnav">
+            <a href="index.php?page=lesboites_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>
+        </div>
+    <?php endif; ?>
 
 </body>
 </html>

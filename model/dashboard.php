@@ -16,7 +16,8 @@ personne.nom,
 personne.prenom,
 personne.telephone,
 personne.email,
-societe.nom AS nom_societe
+societe.nom AS nom_societe,
+societe.id AS id_societe
 FROM
 personne
 LEFT JOIN societe ON personne.societe_id = societe.id
@@ -32,8 +33,10 @@ facture.numero,
 facture.date_facturation,
 facture.motif_prestation,
 societe.nom AS nom_societe,
+societe.id AS id_societe,
 personne.nom AS nom_contact,
-personne.prenom AS prenom_contact
+personne.prenom AS prenom_contact,
+personne.id AS id_personne
 FROM
 facture
 LEFT JOIN societe ON facture.societe_id = societe.id
@@ -57,10 +60,10 @@ if (isset($_GET['msg'])) {
             }
         }
     } else {
-        $admin_message = 'Au plaisir de te revoir!';    
+        $admin_message = 'Au plaisir de te revoir!';
     }
 }
 
 // Titre de la page
-$titre="Accueil";
+$titre="Dashboard";
  ?>

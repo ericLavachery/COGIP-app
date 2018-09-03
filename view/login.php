@@ -17,11 +17,18 @@
             <label for="pwd">Mot de passe</label>
             <input type="password" name="pwd" value="">
         </div>
+        <input type="hidden" name="op" value="<?= $op ?>">
         <label for="button">&nbsp;</label>
         <button type="submit" name="button">Login</button>
     </form>
     <div class="rouge">
         <?= $message ?>
+    </div>
+    <div class="notes">
+        <br>
+        Note pour les coachs : <br>
+        jc / ranu = god <br>
+        muriel / perrache = modo <br>
     </div>
 
 </body>

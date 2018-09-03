@@ -5,13 +5,9 @@
     <link rel="stylesheet" href="view/css/style.css">
     <title>COGIP : <?= $titre ?></title>
 </head>
-<body><?php include '_navig.php' ?>
-    <h1><?= $societe['nom'] ?></h1>
-    <?php if ($admin_level === 'god'): ?>
-        <a href="index.php?page=lesboites_modifier&id=<?=$idsociete?>"><button class="form" type="button" name="button">Modifier</button></a>
-        <a href="index.php?page=lesboites_supprimer&id=<?=$idsociete?>"><button class="form" type="button" name="button">Supprimer</button></a>
-        <br><br>
-    <?php endif; ?>
+<body>
+    <?php include '_navig.php' ?>
+    <h1><?= $titre ?></h1>
 
     <table>
         <tr>
@@ -59,6 +55,11 @@
             </tr>
         <?php } ?>
     </table>
+
+    <br>
+    <div class="rouge">
+        <?= $message ?>
+    </div>
 
 </body>
 </html>
