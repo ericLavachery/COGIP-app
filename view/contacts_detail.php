@@ -14,8 +14,11 @@
     Tél : <?=$personnes['telephone']?><br>
     Email : <?=$personnes['email']?><br>
 
-    <a href="index.php?page=lesgens_modifier&id=<?=$idcontact?>"><button class="form" type="button" name="button">Modifier</button></a>
-    <a href="index.php?page=lesgens_modifier&id=<?=$idcontact?>"><button class="form" type="button" name="button">Supprimer</button></a>
+    <?php if ($admin_level === 'god'): ?>
+        <br>
+        <a href="index.php?page=lesgens_modifier&id=<?=$idcontact?>"><button class="form" type="button" name="button">Modifier</button></a>
+        <a href="index.php?page=lesgens_modifier&id=<?=$idcontact?>"><button class="form" type="button" name="button">Supprimer</button></a>
+    <?php endif; ?>
 
     <h3>Factures</h3>
     <table>

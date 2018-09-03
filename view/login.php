@@ -24,6 +24,12 @@
     <div class="rouge">
         <?= $message ?>
     </div>
+    <div class="notes">
+        <br>
+        Note pour les coachs : <br>
+        jc / ranu = god <br>
+        muriel / perrache = modo <br>
+    </div>
 
 </body>
 </html>
