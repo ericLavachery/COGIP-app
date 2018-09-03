@@ -1,4 +1,6 @@
 <?php
+
+$titre = "Nouveau contact";
 $nom = '';
 $prenom = '';
 $telephone = '';
@@ -7,12 +9,14 @@ $val_email = '';
 $societe_id = '';
 $message = '';
 
-$query = "SELECT nom,id
+$query = 
+"SELECT nom,id
 FROM societe
 ORDER BY societe.nom
 ASC ";
 $stmt = $db->query($query);
 $societes = $stmt->fetchAll();
+$message = '';
 
 // Si utilisation du bouton "Ajouter dans le contact"
 if(isset($_POST['btn'])){
@@ -25,18 +29,25 @@ if(isset($_POST['btn'])){
 
     if(!empty($nom) && !empty($prenom) && !empty($telephone) && !empty($val_email)) {
         //insérer nouvelles données
-        $add_value = $db->query
-        ('INSERT INTO personne(nom, prenom, telephone, email, societe_id) VALUES("'.$nom.'", "'.$prenom.'", "'.$telephone.'", "'.$email.'", "'.$societe_id.'")');
+       try{
+            $add_value = $db->exec('INSERT INTO personne(nom, prenom, telephone, email, societe_id) VALUES("'.$nom.'", "'.$prenom.'", "'.$telephone.'", "'.$email.'", "'.$societe_id.'")');
+
+        $message = "Bien ouèj JC " . $prenom." ".$nom." a bien été ajoutée.";
         $nom = '';
         $prenom = '';
         $telephone = '';
         $email = '';
         $val_email = '';
         $societe_id = '';
-        $message = "Bien ouej JC";
-    }else{
-        $message = "Tu crains JC";
+       
+
+        }catch (Exception $e) {
+
+         $message = 'Cet utilisateur existe déjà';
+            }
     }
 }
-$titre = "Nouveau contact";
+
+
+
 ?>

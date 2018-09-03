@@ -21,6 +21,7 @@
         <a href="index.php?page=lesgens_modifier&id=<?=$idcontact?>"><button class="form" type="button" name="button">Supprimer</button></a>
     <?php endif; ?>
 
+
     <h3>Factures</h3>
     <table>
         <tr>
