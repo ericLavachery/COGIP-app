@@ -17,6 +17,7 @@
             <label for="pwd">Mot de passe</label>
             <input type="password" name="pwd" value="">
         </div>
+        <input type="hidden" name="op" value="<?= $op ?>">
         <label for="button">&nbsp;</label>
         <button type="submit" name="button">Login</button>
     </form>

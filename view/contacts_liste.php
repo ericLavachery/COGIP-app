@@ -25,7 +25,11 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lesgens_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>
+
+    <?php if ($admin_level != ''): ?>
+        <a href="index.php?page=lesgens_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>
+    <?php endif; ?>
+
 
 </body>
 </html>
