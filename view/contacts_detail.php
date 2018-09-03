@@ -11,11 +11,16 @@
 
 <h3><a href="index.php?page=lesboites_detail&id=<?=$personnes['id_societe']?>"><?=$personnes['nom_societe']?></a></h3>
 
-    Tél : <?=$personnes['telephone']?><br>
-    Email : <?=$personnes['email']?><br>
+    <p><span class="detailtitle">Adresse société :</span> <?=$personnes['adresse_societe']?></p>
+    <p><span class="detailtitle">Tél contact :</span> <?=$personnes['telephone']?></p>
+    <p><span class="detailtitle">Email contact :</span> <?=$personnes['email']?></p>
 
-    <a href="index.php?page=lesgens_modifier&id=<?=$idcontact?>"><button class="form" type="button" name="button">Modifier</button></a>
-    <a href="index.php?page=lesgens_supprimer&id=<?=$idcontact?>"><button class="form" type="button" name="button">Supprimer</button></a>
+    <?php if ($admin_level === 'god'): ?>
+        <br>
+        <a href="index.php?page=lesgens_modifier&id=<?=$idcontact?>"><button class="form" type="button" name="button">Modifier</button></a>
+        <a href="index.php?page=lesgens_modifier&id=<?=$idcontact?>"><button class="form" type="button" name="button">Supprimer</button></a>
+    <?php endif; ?>
+
 
     <h3>Factures</h3>
     <table>

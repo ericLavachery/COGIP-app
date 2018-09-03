@@ -1,4 +1,9 @@
 <?php
+if (isset($_GET['op'])) {
+    $op = $_GET['op'];
+} else {
+    $op = '';
+}
 $message = '';
 $log = FALSE;
 session_unset ();
@@ -27,7 +32,8 @@ if (isset($_POST['login']) && isset($_POST['pwd'])) {
         $_SESSION['access'] = $adaccess;
         $_SESSION['nom'] = $adname;
         // on redirige notre visiteur
-        header ('location: index.php');
+        $redir = 'index.php?page=accueil&msg=in';
+        header ('location: ' . $redir);
     }
     else {
         // Le visiteur n'a PAS été reconnu

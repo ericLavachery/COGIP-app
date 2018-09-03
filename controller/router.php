@@ -7,12 +7,12 @@ if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
         $admin_name = $_SESSION['nom'];
     } else {
         $admin_level = '';
-        $admin_name = 'Visiteur';
+        $admin_name = '';
     }
 } else {
     $log = FALSE;
     $admin_level = '';
-    $admin_name = 'Visiteur';
+    $admin_name = '';
 }
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
@@ -30,8 +30,12 @@ if (isset($_GET['page'])) {
         $fichier = str_replace("lesboss", "admins", $page);
     } elseif ($page == 'accueil') {
         $fichier = 'maison';
+    } elseif ($page == 'admin') {
+        $fichier = 'dashboard';
     } elseif ($page == 'connection') {
         $fichier = 'login';
+    } elseif ($page == 'deconnection') {
+        $fichier = 'logout';
     } else {
         $fichier = 'maison';
     }
@@ -43,4 +47,5 @@ if (isset($_GET['page'])) {
     require_once 'model/maison.php';
     require_once 'view/maison.php';
 }
+
 ?>
