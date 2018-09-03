@@ -1,43 +1,50 @@
 <?php
-$idcontact=$_GET['id'];
+$idsociete=$_GET['id'];
 $message = '';
 
 try {
-	$delete_contact = $db->exec("DELETE FROM personne WHERE personne.id= $idcontact;");
-	header('Location: index.php?page=lesgens_liste');
+	$delete_contact = $db->exec("DELETE FROM societe WHERE societe.id= $idsociete;");
+	header('location: index.php?page=lesboites_liste');
 }catch (Exception $e) {
-	$message = 'Vous ne pouvez pas supprimer cet utilisateur, car son nom figure sur des factures';
+	$message = 'Vous ne pouvez pas supprimer cette société, car son nom figure sur des factures ou des contacts';
 
-	// personnes
+	// détail société
+	$query = "SELECT *
+	FROM societe, type_soc
+	WHERE societe.type_soc_id = type_soc.id
+	AND societe.id = $idsociete
+	ORDER BY societe.nom ASC";
+	$stmt = $db->query($query);
+	$societe = $stmt->fetch();
+
+	// liste contacts
+	$query =
+	"SELECT *
+	FROM personne
+	WHERE societe_id = $idsociete
+	ORDER BY personne.prenom";
+	$stmt = $db->query($query);
+	$contacts = $stmt->fetchAll();
+
+	// liste factures
 	$query =
 	"SELECT
-	personne.id,
-	personne.nom,
-	personne.prenom,
-	personne.telephone,
-	personne.email,
-	societe.nom AS nom_societe,
-	societe.adresse AS adresse_societe,
-	societe.id AS id_societe
-	FROM personne, societe
-	WHERE personne.societe_id = societe.id
-	AND personne.id = $idcontact";
-	$personnes = $db->query($query)->fetch();
-
-	// factures
-	$query =
-	"SELECT
-	facture.id,
-	facture.numero,
 	facture.date_facturation,
-	facture.motif_prestation
+	facture.numero,
+	facture.motif_prestation,
+	facture.id,
+	personne.id AS id_personne,
+	personne.prenom,
+	personne.nom
 	FROM facture, personne
-	WHERE facture.personne_id = personne.id
-	AND personne.id = $idcontact
-	ORDER BY facture.id";
+	WHERE personne.id = facture.personne_id
+	AND facture.societe_id = $idsociete
+	ORDER BY facture.date_facturation DESC";
 	$stmt = $db->query($query);
 	$factures = $stmt->fetchAll();
 
-	$titre = $personnes['prenom'] . ' ' . $personnes['nom'];
+	// Titre de la page
+	$titre = $societe['nom'];
+
 }
 ?>
