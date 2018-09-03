@@ -57,15 +57,7 @@ if (isset($_GET['msg'])) {
             }
         }
     } else {
-        if ($admin_name != '') {
-            if ($admin_name == 'Jean-Christian Ranu') {
-                $admin_message = "Reviens vite JC, t'es un winner!";
-            } elseif ($admin_name == 'Muriel Perrache') {
-                $admin_message = "A la prochaine, Mumu!";
-            } else {
-                $admin_message = 'Au plaisir de te revoir, ' . $admin_name;
-            }
-        }
+        $admin_message = 'Au plaisir de te revoir!';    
     }
 }
 

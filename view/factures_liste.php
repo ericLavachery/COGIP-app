@@ -28,7 +28,9 @@
     </table>
 
     <?php if ($admin_level != ''): ?>
-        <a href="index.php?page=lepognon_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>
+        <div class="subnav">
+            <a href="index.php?page=lepognon_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>
+        </div>
     <?php endif; ?>
 
 

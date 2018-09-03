@@ -11,8 +11,9 @@
 
 <h3><a href="index.php?page=lesboites_detail&id=<?=$personnes['id_societe']?>"><?=$personnes['nom_societe']?></a></h3>
 
-    Tél : <?=$personnes['telephone']?><br>
-    Email : <?=$personnes['email']?><br>
+    <p><span class="detailtitle">Adresse société :</span> <?=$personnes['adresse_societe']?></p>
+    <p><span class="detailtitle">Tél contact :</span> <?=$personnes['telephone']?></p>
+    <p><span class="detailtitle">Email contact :</span> <?=$personnes['email']?></p>
 
     <?php if ($admin_level === 'god'): ?>
         <br>

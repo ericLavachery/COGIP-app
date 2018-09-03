@@ -29,11 +29,11 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lesboites_liste"><button class="form" type="button" name="button">Toutes les sociétés</button></a>
-    <a href="index.php?page=lesboites_liste&ctype=cln"><button class="form" type="button" name="button">Clients</button></a>
-    <a href="index.php?page=lesboites_liste&ctype=frn"><button class="form" type="button" name="button">Fournisseurs</button></a>
-
-    <br>
+    <div class="subnav">
+        <a href="index.php?page=lesboites_liste"><button class="form" type="button" name="button">Toutes les sociétés</button></a>
+        <a href="index.php?page=lesboites_liste&ctype=cln"><button class="form" type="button" name="button">Clients</button></a>
+        <a href="index.php?page=lesboites_liste&ctype=frn"><button class="form" type="button" name="button">Fournisseurs</button></a>
+    </div>
 
     <h3>Contacts</h3>
     <table>
@@ -52,7 +52,9 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lesgens_liste"><button class="form" type="button" name="button">Tous les contacts</button></a>
+    <div class="subnav">
+        <a href="index.php?page=lesgens_liste"><button class="form" type="button" name="button">Tous les contacts</button></a>
+    </div>
 
     <br>
 
@@ -75,7 +77,9 @@
             </tr>
         <?php } ?>
     </table>
-    <a href="index.php?page=lepognon_liste"><button class="form" type="button" name="button">Toutes les factures</button></a>
+    <div class="subnav">
+        <a href="index.php?page=lepognon_liste"><button class="form" type="button" name="button">Toutes les factures</button></a>
+    </div>
 
 </body>
 </html>
