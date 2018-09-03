@@ -54,19 +54,22 @@ if(isset($_POST['btn'])){
     $societe_id = $societe['societe_id'];
 
     if(!empty($nmro) && !empty($datef) && !empty($motif)) {
-        //insérer nouvelles données
-        $add_value = $db->query
-        ('INSERT INTO facture(numero, date_facturation, motif_prestation,societe_id,personne_id) VALUES("'.$nmro.'", "'.$datef.'", "'.$motif.'", "'.$societe_id.'", "'.$personne_id.'")');
+        //insérer nouvelles 
+        try{
+            $add_value = $db->query
+            ('INSERT INTO facture(numero, date_facturation, motif_prestation,societe_id,personne_id) VALUES("'.$nmro.'", "'.$datef.'", "'.$motif.'", "'.$societe_id.'", "'.$personne_id.'")');
 
-        $nmro = '';
-        $datef = '';
-        $motif = '';
-        $societe_id = '';
-        $personne_id = '';
+            $message = "Bien ouej JC ! La facture n°" . $nmro . " a bien été ajoutée " ;
+            $nmro = '';
+            $datef = '';
+            $motif = '';
+            $societe_id = '';
+            $personne_id = '';
+        }catch (Exception $e) {
 
-        $message = "Bien ouej JC";
-    }else{
-        $message = "Tu crains JC";
+         $message = 'Ce numéro de facture existe déjà';
+            }
     }
 }
+        
 ?>

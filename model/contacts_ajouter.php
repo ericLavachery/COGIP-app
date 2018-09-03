@@ -32,7 +32,7 @@ if(isset($_POST['btn'])){
        try{
             $add_value = $db->exec('INSERT INTO personne(nom, prenom, telephone, email, societe_id) VALUES("'.$nom.'", "'.$prenom.'", "'.$telephone.'", "'.$email.'", "'.$societe_id.'")');
 
-        $message = "Bien ouèj JC " . $prenom." ".$nom." a bien été ajoutée.";
+        $message = "Bien ouèj JC ! Le contact " . $prenom." ".$nom." a bien été ajouté.";
         $nom = '';
         $prenom = '';
         $telephone = '';
