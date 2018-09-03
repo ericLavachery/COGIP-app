@@ -11,6 +11,9 @@
     <?php if ($admin_message != ''): ?>
         <p class="rouge"><?= $admin_message ?></p>
     <?php endif; ?>
+    <?php if ($securityMessage != ''): ?>
+        <p class="rouge"><?= $securityMessage ?></p>
+    <?php endif; ?>
 
     <h3>Sociétés</h3>
     <table>

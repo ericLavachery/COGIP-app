@@ -1,18 +1,21 @@
 <?php
 session_start ();
+$admin_level = '';
+$admin_name = '';
+$admin_link = 'detail';
+$securityMessage = '';
+
 if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
     $log = TRUE;
     if (isset($_SESSION['access'])) {
         $admin_level = $_SESSION['access'];
         $admin_name = $_SESSION['nom'];
-    } else {
-        $admin_level = '';
-        $admin_name = '';
+        if ($admin_level == 'god') {
+            $admin_link = 'modifier';
+        }
     }
 } else {
     $log = FALSE;
-    $admin_level = '';
-    $admin_name = '';
 }
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
@@ -38,6 +41,20 @@ if (isset($_GET['page'])) {
         $fichier = 'logout';
     } else {
         $fichier = 'maison';
+    }
+    // seulement jc peut modifier
+    if ($admin_level != 'god') {
+        if (strpos($fichier, 'modifier') !== FALSE || strpos($fichier, 'supprimer') !== FALSE) {
+            $securityMessage = 'Seul JC peut modifier ou supprimer des trucs!';
+            $fichier = 'maison';
+        }
+    }
+    // seulement les modos peuvent ajouter
+    if (!$log) {
+        if (strpos($fichier, 'ajouter') !== FALSE) {
+            $securityMessage = 'Seuls les admins peuvent ajouter des trucs!';
+            $fichier = 'maison';
+        }
     }
     require_once 'model/'.$fichier.'.php';
     require_once 'view/'.$fichier.'.php';
