@@ -30,6 +30,8 @@ if (isset($_GET['page'])) {
         $fichier = str_replace("lesboss", "admins", $page);
     } elseif ($page == 'accueil') {
         $fichier = 'maison';
+    } elseif ($page == 'admin') {
+        $fichier = 'dashboard';
     } elseif ($page == 'connection') {
         $fichier = 'login';
     } elseif ($page == 'deconnection') {
