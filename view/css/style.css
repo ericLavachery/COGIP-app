@@ -121,3 +121,9 @@ h3 a:hover{
 .subnav {
     margin: 7px 0 7px 0;
 }
+section a {
+  color : #3a9ba9;
+}
+footer {
+  margin-top: 10px;
+}

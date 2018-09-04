@@ -1,4 +1,4 @@
-<?php include('header.php') ?>
+<?php include 'header.php' ?>
 
     <h1><?= $titre ?></h1>
 
@@ -18,5 +18,4 @@
     </table>
     <a href="index.php?page=lesboss_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>
 
-</body>
-</html>
+<?php include 'footer.php' ?>

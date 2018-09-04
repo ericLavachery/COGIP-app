@@ -1,4 +1,4 @@
-<?php include('header.php') ?>
+<?php include 'header.php' ?>
 
     <h1><?= $titre ?></h1>
 
@@ -42,5 +42,4 @@
     <div class="rouge">
         <?= $message ?>
     </div>
-</body>
-</html>
+<?php include 'footer.php' ?>
