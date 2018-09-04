@@ -41,9 +41,9 @@ Nous avons choisi de nous répartir le travail de la manière suivante:
 - [Eric Lavachery](https://github.com/ericLavachery) s'est chargé de la partie _"société"_ ainsi que de
   la confection du _router_, de la structure _MVC_, l'élaboration et le suivi du _Kanban_ et le déploiement
 - [Geraldine Winand](https://github.com/Geraldinew04) de la partie _"contact"_ et du _design_
-- [Jesse Fumba](https://github.com/JFumba) de ce qui concerne la partie _"facture"_, du _README_ et d'une  partie du _design_.
+- [Jesse Fumba](https://github.com/JFumba) de ce qui concerne la partie _"facture"_, du _README_.
 
-Bien qu'ayant chacun nos tâches propres, nous nous sommes entraidés et nous avons communiqué tout au long du challenge, de sorte que celui-ci soit un tout cohérent.
+Bien qu'ayant chacun nos tâches propres, nous nous sommes entraidés et nous avons communiqué tout au long du challenge, de sorte que celui-ci constitue un tout cohérent.
 
 ## schéma visuel de la base de données relationnelle :
 
