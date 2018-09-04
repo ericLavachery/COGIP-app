@@ -1,4 +1,10 @@
 <?php
+if (isset($_GET['sort'])) {
+    $sort = $_GET['sort'];
+} else {
+    $sort = 'personne.nom';
+}
+
 // annuaire
 $query = "SELECT
 personne.id,
@@ -11,7 +17,7 @@ personne.societe_id
 FROM
 personne
 LEFT JOIN societe ON personne.societe_id = societe.id
-ORDER BY personne.nom";
+ORDER BY $sort";
 
 $stmt = $db->query($query);
 $personnes = $stmt->fetchAll();
