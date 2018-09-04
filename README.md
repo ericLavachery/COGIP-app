@@ -43,7 +43,7 @@ Nous avons choisi de nous répartir le travail de la manière suivante:
 - [Geraldine Winand](https://github.com/Geraldinew04) de la partie _"contact"_ et du *design*
 - [Jesse Fumba](https://github.com/JFumba) de ce qui concerne la partie _"facture"_, du *README* et d'une  partie du _design_.
 
-Bien qu'ayant chacun nos tâches propres, nous nous sommes entraidés et nous avons communiquons tout au long du challenge, de sorte que celui-ci soit un tout cohérent.
+Bien qu'ayant chacun nos tâches propres, nous nous sommes entraidés et nous avons communiqué tout au long du challenge, de sorte que celui-ci soit un tout cohérent.
 
 ## schéma visuel de la base de données relationnelle :
 
