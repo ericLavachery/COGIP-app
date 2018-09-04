@@ -99,24 +99,7 @@ h3 a:hover{
 .rouge {
     color: #dd0f0f;
 }
-.actif {
-    border-style: solid;
-    border-color: #8a8800;
-    border-width: 2px;
-    display: inline-block;
-    margin: auto;
-    padding: 3px;
-    border-radius: 50%;
-}
-.passif {
-    border-style: solid;
-    border-color: rgba(99, 126, 117, 0.3);
-    border-width: 2px;
-    display: inline-block;
-    margin: auto;
-    padding: 3px;
-    border-radius: 50%;
-}
+
 .notes {
     color: #be0bb7;
     font-size: 12px;
@@ -128,7 +111,7 @@ section a {
   color : #3a9ba9;
 }
 footer {
-  margin-top: 10px;
+  margin-top: 3%;
 }
 .title_page h1 {
   color: #096199;
