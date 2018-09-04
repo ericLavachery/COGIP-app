@@ -1,7 +1,5 @@
 <?php include 'header.php' ?>
 
-    <h1><?= $titre ?></h1>
-
     <form action="" method="post">
         <div>
             <label for="login">Login : </label>

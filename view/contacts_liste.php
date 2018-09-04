@@ -1,11 +1,9 @@
-<?php include('header.php') ?>
-
-    <h1><?= $titre ?></h1>
+<?php include 'header.php' ?>
 
     <table>
         <tr>
-            <td class="tabtitle">Contact</td>
-            <td class="tabtitle">Société</td>
+            <td class="tabtitle"><a href="index.php?page=lesgens_liste&sort=personne.nom" title="Classer par noms">Contact</a></td>
+            <td class="tabtitle"><a href="index.php?page=lesgens_liste&sort=nom_societe" title="Classer par sociétés">Société</a></td>
             <td class="tabtitle">Téléphone</td>
             <td class="tabtitle">Email</td>
         </tr>
@@ -18,7 +16,6 @@
             </tr>
         <?php } ?>
     </table>
-
     <?php if ($admin_level != ''): ?>
         <div class="subnav">
             <a href="index.php?page=lesgens_ajouter"><button class="form" type="button" name="button">Ajouter</button></a>

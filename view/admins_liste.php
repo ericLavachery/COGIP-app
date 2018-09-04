@@ -1,7 +1,5 @@
 <?php include 'header.php' ?>
 
-    <h1><?= $titre ?></h1>
-
     <table>
         <tr>
             <td class="tabtitle">Nom</td>

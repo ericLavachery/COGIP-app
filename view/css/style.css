@@ -1,9 +1,12 @@
+
 body {
     padding: 10px 20px 10px 20px;
     font-family: verdana, arial;
-    font-size: 17px;
-    color: #637e75;
+    font-size: 16px;
+    color: #096199;
 }
+
+
 label {
     width: 160px;
     display: inline-block;
@@ -35,7 +38,7 @@ textarea {
 }
 .tabtitle {
     padding: 0px 10px 5px 10px;
-    color: #178863;
+    color: #178863 blue;
     font-weight: bold;
 }
 .tabrow {

@@ -1,20 +1,4 @@
-<?php include('header.php') ?>
-
-    <h1><?= $societe['nom'] ?></h1> 
-    <!-- <table>
-        <tr>
-            <td class="tabtitle">Type</td>
-            <td class="tabtitle">Adresse</td>
-            <td class="tabtitle">Téléphone</td>
-            <td class="tabtitle">TVA</td>
-        </tr>
-        <tr>
-            <td class="tabrow"><?=$societe['type']?></td>
-            <td class="tabrow"><?=$societe['adresse']?> | <?=$societe['pays']?></td>
-            <td class="tabrow"><?=$societe['telephone']?></td>
-            <td class="tabrow"><?=$societe['tva']?></td>
-        </tr>
-    </table> -->
+<?php include 'header.php' ?>
 
     <h3>Société</h3>
     <div class="detail">
