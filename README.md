@@ -31,12 +31,12 @@
 - Savoir mettre en place une session
 - Permettre ou non l'accès à certaines pages en fonction des permissions de session
 
-##Composition de l'équipe :
+## Composition de l'équipe :
 - [Eric Lavachery](https://github.com/ericLavachery)
 - [Geraldine Winand](https://github.com/Geraldinew04)
 - [Jesse Fumba](https://github.com/JFumba)
 
-##Répartition des tâches :
+## Répartition des tâches :
 Nous avons choisi de nous répartir le travail de la manière suivante:
 - [Eric Lavachery](https://github.com/ericLavachery) s'est chargé de la partie _"société"_ ainsi que de
   la confection du *router*, de la structure _MVC_, l'élaboration et le suivi du *Kanban* et le déploiement
@@ -45,12 +45,12 @@ Nous avons choisi de nous répartir le travail de la manière suivante:
 
 Bien qu'ayant chacun nos tâches propres, nous nous sommes entraidés et nous avons communiquons tout au long du challenge, de sorte que celui-ci soit un tout cohérent.
 
-##schéma visuel de la base de données relationnelle :
+## schéma visuel de la base de données relationnelle :
 
 ![Schema](schema_db.png)
 
-##Fichier sql :
+## Fichier sql :
 
 [fichier_sql](db/id6935654_cogip.sql)
 
-##URL du site consultable et fonctionnel :
+## URL du site consultable et fonctionnel :
