@@ -1,9 +1,12 @@
+
 body {
     padding: 10px 20px 10px 20px;
     font-family: verdana, arial;
-    font-size: 17px;
-    color: red;
+    font-size: 16px;
+    color: #096199;
 }
+
+
 label {
     width: 160px;
     display: inline-block;
@@ -35,7 +38,7 @@ textarea {
 }
 .tabtitle {
     padding: 0px 10px 5px 10px;
-    color: #178863;
+    color: #178863 blue;
     font-weight: bold;
 }
 .tabrow {
@@ -96,7 +99,7 @@ h3 a:hover{
 .rouge {
     color: #dd0f0f;
 }
-/*.actif {
+.actif {
     border-style: solid;
     border-color: #8a8800;
     border-width: 2px;
@@ -113,7 +116,7 @@ h3 a:hover{
     margin: auto;
     padding: 3px;
     border-radius: 50%;
-}*/
+}
 .notes {
     color: #be0bb7;
     font-size: 12px;
