@@ -14,11 +14,15 @@
 </head>
 <body>
 
+	<div class="logo">
+		<img src="view/img/logo.png">
+	</div>
+
     <div class="menu">
         <div class="row">
             <div class="col-sm-12">
                 <div class="items" id="my-nav nav-container">
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3a9ba9;">
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" name="button">
                             <span class="navbar-toggler-icon"></span>

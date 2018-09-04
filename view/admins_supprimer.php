@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include '_navig.php' ?>
+
   <h1>Admin <?= $titre ?></h1>
 
     <h3><a href="index.php?page=lesboss_detail&id=<?=$admin['id']?>"><?=$admin['nom']?></a></h3>
