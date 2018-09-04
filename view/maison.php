@@ -1,15 +1,12 @@
 
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="view/css/style.css">
-    <title>COGIP : <?= $titre ?></title>
-</head>
-<body><?php include '_navig.php' ?>
+<?php include('header.php') ?>
+<?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
     <?php if ($admin_message != ''): ?>
         <p class="rouge"><?= $admin_message ?></p>
+    <?php endif; ?>
+    <?php if ($securityMessage != ''): ?>
+        <p class="rouge"><?= $securityMessage ?></p>
     <?php endif; ?>
 
     <h3>Sociétés</h3>
@@ -22,7 +19,7 @@
         </tr>
         <?php foreach ($societes as $key => $value){?>
             <tr>
-                <td class="tabrow"><a href="index.php?page=lesboites_detail&id=<?=$value['id']?>"><?=$value['nom']?></a></td>
+                <td class="tabrow"><a href="index.php?page=lesboites_detail&id=<?=$value['id_societe']?>"><?=$value['nom']?></a></td>
                 <td class="tabrow"><?=$value['type']?></td>
                 <td class="tabrow"><?=$value['telephone']?></td>
                 <td class="tabrow"><?=$value['tva']?></td>

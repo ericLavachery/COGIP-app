@@ -11,8 +11,9 @@
 
     <h3><?=$personnes['nom_societe']?></h3>
 
-    Tél : <?=$personnes['telephone']?><br>
-    Email : <?=$personnes['email']?><br>
+        <p><span class="detailtitle">Adresse société :</span> <?=$personnes['adresse_societe']?></p>
+        <p><span class="detailtitle">Téléphone :</span> <?=$personnes['telephone']?></p>
+        <p><span class="detailtitle">Email : </span> <?=$personnes['email']?></p>
 
     <h3>Factures</h3>
     <table>

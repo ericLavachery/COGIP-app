@@ -6,14 +6,8 @@
     <title>COGIP : <?= $titre ?></title>
 </head>
 <body><?php include '_navig.php' ?>
-    <h1><?= $societe['nom'] ?></h1>
-    <?php if ($admin_level === 'god'): ?>
-        <a href="index.php?page=lesboites_modifier&id=<?=$idsociete?>"><button class="form" type="button" name="button">Modifier</button></a>
-        <a href="index.php?page=lesboites_supprimer&id=<?=$idsociete?>"><button class="form" type="button" name="button">Supprimer</button></a>
-        <br><br>
-    <?php endif; ?>
-
-    <table>
+    <h1><?= $societe['nom'] ?></h1> 
+    <!-- <table>
         <tr>
             <td class="tabtitle">Type</td>
             <td class="tabtitle">Adresse</td>
@@ -26,9 +20,23 @@
             <td class="tabrow"><?=$societe['telephone']?></td>
             <td class="tabrow"><?=$societe['tva']?></td>
         </tr>
-    </table>
+    </table> -->
+
+    <h3>Société</h3>
+    <div class="detail">
+        <p><span class="detailtitle">TYpe :</span><?=$societe['type']?></p>
+        <p><span class="detailtitle">Adresse : </span><?=$societe['adresse']?> | <?=$societe['pays']?></p>
+        <p><span class="detailtitle">Téléphone :</span><?=$societe['telephone']?></p>
+        <p><span class="detailtitle">TVA :</span><?=$societe['tva']?></p>
+    </div>
 
     <br>
+    
+   <?php if ($admin_level === 'god'): ?>
+        <a href="index.php?page=lesboites_modifier&id=<?=$idsociete?>"><button class="form" type="button" name="button">Modifier</button></a>
+        <a href="index.php?page=lesboites_supprimer&id=<?=$idsociete?>"><button class="form" type="button" name="button">Supprimer</button></a>
+        <br><br>
+    <?php endif; ?>
 
     <h3>Contacts</h3>
     <table>

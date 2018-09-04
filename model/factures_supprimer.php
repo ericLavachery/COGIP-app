@@ -1,6 +1,6 @@
 <?php
-$idfacture=$_GET['id'];
-$message = '';
+	$idfacture=$_GET['id'];
+	$message = '';
 
 try {
 	$delete_facture = $db->exec("DELETE FROM facture WHERE facture.id= $idfacture;");

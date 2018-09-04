@@ -1,9 +1,4 @@
 <?php
-if (isset($_GET['op'])) {
-    $op = $_GET['op'];
-} else {
-    $op = '';
-}
 $message = '';
 $log = FALSE;
 session_unset ();
