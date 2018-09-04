@@ -25,7 +25,7 @@
         </tr>
         <?php foreach ($societes as $key => $value){?>
             <tr>
-                <td class="tabrow"><a href="index.php?page=lesboites_detail&id=<?=$value['id']?>"><?=$value['nom']?></a></td>
+                <td class="tabrow"><a href="index.php?page=lesboites_detail&id=<?=$value['id_societe']?>"><?=$value['nom']?></a></td>
                 <td class="tabrow"><?=$value['type']?></td>
                 <td class="tabrow"><?=$value['telephone']?></td>
                 <td class="tabrow"><?=$value['tva']?></td>
