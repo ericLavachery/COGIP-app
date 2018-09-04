@@ -1,14 +1,13 @@
-<?php include('header.php') ?>
-<?php include '_navig.php' ?>
+<?php include 'header.php' ?>
     <h1><?= $titre ?></h1>
 
     <table>
         <tr>
-            <td class="tabtitle">Numéro</td>
-            <td class="tabtitle">Société</td>
-            <td class="tabtitle">Date</td>
-            <td class="tabtitle">Prestation</td>
-            <td class="tabtitle">Contact</td>
+            <td class="tabtitle"><a href="index.php?page=lepognon_liste&sort=facture.numero" title="Classer par noms">Numéro</a></td>
+            <td class="tabtitle"><a href="index.php?page=lepognon_liste&sort=nom_societe" title="Classer par noms">Société</a></td>
+            <td class="tabtitle"><a href="index.php?page=lepognon_liste&sort=facture.date_facturation" title="Classer par noms">Date</a></td>
+            <td class="tabtitle"><a href="index.php?page=lepognon_liste&sort=facture.motif_prestation" title="Classer par noms">Prestation</a></td>
+            <td class="tabtitle"><a href="index.php?page=lepognon_liste&sort=nom_contact" title="Classer par noms">Contact</a></td>
         </tr>
         <?php foreach ($factures as $key => $value){?>
             <tr>
