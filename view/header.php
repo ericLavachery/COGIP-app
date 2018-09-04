@@ -40,26 +40,25 @@
 				       			</a>
 				      		</li>
 				      		
-				      		<li class="nav-item <?php if($_GET['page'] === 'lepognon_liste'){echo 'active';}?>">
+				      		<li class="nav-item <?php if (strpos($page, 'lepognon') === 0) {echo 'active';} ?>">
 				        		<a class="nav-link" href="index.php?page=lepognon_liste">Factures
 				        		</a>
 				      		</li>
 
 				      		<?php
-				      			if($log){
-				      					      		
+				      			if($log){			      		
 
 				      		?>
 
-				      		<li class="nav-item <?php if($_GET['page'] === 'admin'){echo 'active';}?>">
+				      		<li class="nav-item <?php if ($page == 'admin') {echo 'active';} ?>">
 				        		<a class="nav-link" href="index.php?page=admin">Dashboard
 				        		</a>
 				      		</li>
-				      		<li class="nav-item <?php if($_GET['page'] === 'lesboss_liste'){echo 'active';}?>">
+				      		<li class="nav-item <?php if (strpos($page, 'lesboss') === 0) {echo 'active';} ?>">
 				        		<a class="nav-link" href="index.php?page=lesboss_liste">Admin
 				        		</a>
 				      		</li>
-				      		<li class="nav-item <?php if($_GET['page'] === 'accueil&msg=out'){echo 'active';}?>">
+				      		<li class="nav-item <?php if (strpos($page, 'deconnection') === 0) {echo 'active';}?>">
 				        		<a class="nav-link" href="?page=deconnection&op=<?=$page?>">Log out
 				        		</a>
 				      		</li>
@@ -67,7 +66,7 @@
 				      		<?php
 				      			}else{
 				      		?>
-				      			<li class="nav-item <?php if($_GET['page'] === 'connection&op=accueil'){echo 'active';}?>">
+				      			<li class="nav-item <?php if (strpos($page, 'connection') === 0) {echo 'active';} ?>">
 				        		<a class="nav-link" href="index.php?page=connection&op=accueil">Log in
 				        		</a>
 				      		</li>
