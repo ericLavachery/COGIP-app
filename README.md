@@ -9,7 +9,7 @@
 
  Celle-ci répond à un certain nombre d'objectifs:
 
- ### Objectifs d'évaluation
+ #### Objectifs d'évaluation
 - Utiliser des paramètres URL et des noms de fichiers différents (l'application est structurée de manière à utiliser un router et de manière à séparer autant que possible le calcul de l'affichage. C'est à dire : le moins de PHP possible dans les templates, juste boucle et commandes d'affichage tels que echo).
 - Bien utiliser la sanitization pour éviter les injections SQL dans votre DB (un esprit malveillant pourrait tenter de delete l'intégralité de votre DB)
 - Valider les données afin que Ranu n'encode pas n'importe quoi
@@ -24,7 +24,7 @@
 - Déployer l'application sur un hébergement adapté; l'application est fonctionnelle (les CRUD fonctionnent)
 - Prévoir les erreurs dans le formulaire (maladresses ou tentatives d'injection SQL) : les messages d'erreurs s'affichent à proximité du champ concerné.
 
-### Objectifs d'apprentissage
+#### Objectifs d'apprentissage
 - Crypter le mot de passe dans la base de données (il ne doit pas apparaître en clair)
 - Utiliser la structure MVC pour ranger vos fichiers et vos fonctionnalités
 - Utiliser un routeur
