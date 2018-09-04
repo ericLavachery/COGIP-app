@@ -55,4 +55,4 @@ Bien qu'ayant chacun nos tâches propres, nous nous sommes entraidés et nous av
 
 ## URL du site consultable et fonctionnel :
 
-[fichier_sql](https://cogip.000webhostapp.com/COGIP-app/)
+[COGIP sur 000webhost](https://cogip.000webhostapp.com/COGIP-app/)
