@@ -1,7 +1,6 @@
 
-<?php include('header.php') ?>
+<?php include 'header.php' ?>
 
-    <h1><?= $titre ?></h1>
     <?php if ($admin_message != ''): ?>
         <p class="rouge"><?= $admin_message ?></p>
     <?php endif; ?>
