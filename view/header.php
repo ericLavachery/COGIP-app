@@ -27,7 +27,7 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
-                                <li class="nav-item <?php if ($page == '') {echo 'active';} ?>">
+                                <li class="nav-item <?php if ($page == 'accueil' || $page == '') {echo 'active';} ?>">
                                     <a class="nav-link " href="index.php">Home
                                     </a>
                                 </li>
