@@ -12,7 +12,7 @@
  #### Objectifs d'évaluation
 - Utiliser des paramètres URL et des noms de fichiers différents (l'application est structurée de manière à utiliser un router et de manière à séparer autant que possible le calcul de l'affichage. C'est à dire : le moins de PHP possible dans les templates, juste boucle et commandes d'affichage tels que echo).
 - Bien utiliser la sanitization pour éviter les injections SQL dans votre DB (un esprit malveillant pourrait tenter de delete l'intégralité de votre DB)
-- Valider les données afin que Ranu n'encode pas n'importe quoi
+- Valider les données afin qu'un administrateur n'encode pas n'importe quoi
 - Contruire une base de données relationnelles fonctionnelle
 - Utiliser des jointures correctes en SQL
 - Utiliser des alias dans vos requêtes SQL
@@ -39,9 +39,9 @@
 ## Répartition des tâches :
 Nous avons choisi de nous répartir le travail de la manière suivante:
 - [Eric Lavachery](https://github.com/ericLavachery) s'est chargé de la partie _"société"_ ainsi que de
-  la confection du *router*, de la structure _MVC_, l'élaboration et le suivi du *Kanban* et le déploiement
-- [Geraldine Winand](https://github.com/Geraldinew04) de la partie _"contact"_ et du *design*
-- [Jesse Fumba](https://github.com/JFumba) de ce qui concerne la partie _"facture"_, du *README* et d'une  partie du _design_.
+  la confection du _router_, de la structure _MVC_, l'élaboration et le suivi du _Kanban_ et le déploiement
+- [Geraldine Winand](https://github.com/Geraldinew04) de la partie _"contact"_ et du _design_
+- [Jesse Fumba](https://github.com/JFumba) de ce qui concerne la partie _"facture"_, du _README_ et d'une  partie du _design_.
 
 Bien qu'ayant chacun nos tâches propres, nous nous sommes entraidés et nous avons communiqué tout au long du challenge, de sorte que celui-ci soit un tout cohérent.
 
