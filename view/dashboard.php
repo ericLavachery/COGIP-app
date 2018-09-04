@@ -11,6 +11,7 @@
     <?php if ($admin_message != ''): ?>
         <p class="rouge"><?= $admin_message ?></p>
     <?php endif; ?>
+    <a href="index.php?page=lesboss_liste"><button class="form" type="button" name="button">Gérer les comptes adninistrateurs</button></a>
 
     <h3>Sociétés</h3>
     <table>

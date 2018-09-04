@@ -4,7 +4,8 @@
 <span class="<?php if (strpos($page, 'lesgens') === 0) {echo 'actif';} else {echo 'passif';} ?>"><a href="?page=lesgens_liste"><button class="navig" type="button" name="button">Contacts</button></a></span>
 <span class="<?php if (strpos($page, 'lepognon') === 0) {echo 'actif';} else {echo 'passif';} ?>"><a href="?page=lepognon_liste"><button class="navig" type="button" name="button">Factures</button></a></span>
 <?php if ($log): ?>
-    <span class="<?php if (strpos($page, 'lesboss') === 0 || $page == 'admin') {echo 'actif';} else {echo 'passif';} ?>"><a href="?page=admin"><button class="navig" type="button" name="button">Admin</button></a></span>
+    <span class="<?php if ($page == 'admin') {echo 'actif';} else {echo 'passif';} ?>"><a href="?page=admin"><button class="navig" type="button" name="button">Dashboard</button></a></span>
+    <span class="<?php if (strpos($page, 'lesboss') === 0) {echo 'actif';} else {echo 'passif';} ?>"><a href="?page=lesboss_liste"><button class="navig" type="button" name="button">Admins</button></a></span>
 <?php endif; ?>
 <?php if (!$log): ?>
     <span class="<?php if (strpos($page, 'connection') === 0) {echo 'actif';} else {echo 'passif';} ?>"><a href="?page=connection&op=<?=$page?>"><button class="navig" type="button" name="button">Connection</button></a></span>

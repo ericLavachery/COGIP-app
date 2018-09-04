@@ -1,7 +1,4 @@
 <?php
-//Titre de la page
-$titre = $personnes['prenom'] . ' ' . $personnes['nom'];
-
 $idcontact=$_GET['id'];
 $message = '';
 
@@ -41,6 +38,7 @@ try {
 	$stmt = $db->query($query);
 	$factures = $stmt->fetchAll();
 
-	
+	//Titre de la page
+	$titre = $personnes['prenom'] . ' ' . $personnes['nom'];
 }
 ?>

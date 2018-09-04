@@ -1,7 +1,4 @@
 <?php
-	// Titre de la page
-	$titre="Facture " . $factures['numero'];
-
 	$idfacture=$_GET['id'];
 	$message = '';
 
@@ -31,6 +28,9 @@ try {
 	  ORDER BY facture.date_facturation";
 	$stmt = $db->query($query);
 	$factures = $stmt->fetch();
+
+	// Titre de la page
+	$titre="Facture " . $factures['numero'];
 
 }
 ?>
