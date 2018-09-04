@@ -1,7 +1,13 @@
 <?php
 
 // les 5 dernières sociétés
-$query = "SELECT *
+$query = "SELECT
+societe.nom,
+societe.telephone,
+societe.tva,
+societe.id AS id_societe,
+type_soc.id,
+type_soc.type
 FROM societe, type_soc
 WHERE societe.type_soc_id = type_soc.id
 ORDER BY societe.id DESC

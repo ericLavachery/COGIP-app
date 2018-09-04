@@ -14,13 +14,15 @@
             <td class="tabtitle">Type</td>
             <td class="tabtitle">Téléphone</td>
             <td class="tabtitle">TVA</td>
+            <td></td>
         </tr>
         <?php foreach ($societes as $key => $value){?>
             <tr>
-                <td class="tabrow"><a href="index.php?page=lesboites_<?=$admin_link?>&id=<?=$value['id']?>"><?=$value['nom']?></a></td>
+                <td class="tabrow"><a href="index.php?page=lesboites_<?=$admin_link?>&id=<?=$value['id_societe']?>" title="<?=$admin_link?>"><?=$value['nom']?></a></td>
                 <td class="tabrow"><?=$value['type']?></td>
                 <td class="tabrow"><?=$value['telephone']?></td>
                 <td class="tabrow"><?=$value['tva']?></td>
+                <td class="tabrow"><a href="index.php?page=lesboites_detail&id=<?=$value['id_societe']?>" title="supprimer">X</a></td>
             </tr>
         <?php } ?>
     </table>
@@ -38,13 +40,15 @@
             <td class="tabtitle">Société</td>
             <td class="tabtitle">Téléphone</td>
             <td class="tabtitle">Email</td>
+            <td></td>
         </tr>
         <?php foreach ($contacts as $key => $value){?>
             <tr>
-                <td class="tabrow"><a href="index.php?page=lesgens_<?=$admin_link?>&id=<?=$value['id']?>"><?=$value['prenom']?> <?=$value['nom']?></a></td>
-                <td class="tabrow"><a href="index.php?page=lesboites_<?=$admin_link?>&id=<?=$value['id_societe']?>"><?=$value['nom_societe']?></a></td>
+                <td class="tabrow"><a href="index.php?page=lesgens_<?=$admin_link?>&id=<?=$value['id']?>" title="<?=$admin_link?>"><?=$value['prenom']?> <?=$value['nom']?></a></td>
+                <td class="tabrow"><a href="index.php?page=lesboites_<?=$admin_link?>&id=<?=$value['id_societe']?>" title="<?=$admin_link?>"><?=$value['nom_societe']?></a></td>
                 <td class="tabrow"><?=$value['telephone']?></td>
                 <td class="tabrow"><?=$value['email']?></td>
+                <td class="tabrow"><a href="index.php?page=lesgens_detail&id=<?=$value['id']?>" title="supprimer">X</a></td>
             </tr>
         <?php } ?>
     </table>
@@ -63,14 +67,16 @@
             <td class="tabtitle">Date</td>
             <td class="tabtitle">Prestation</td>
             <td class="tabtitle">Contact</td>
+            <td></td>
         </tr>
         <?php foreach ($factures as $key => $value){?>
             <tr>
-                <td class="tabrow"><a href="index.php?page=lepognon_<?=$admin_link?>&id=<?=$value['id']?>"><?=$value['numero']?></a></td>
-                <td class="tabrow"><a href="index.php?page=lesboites_<?=$admin_link?>&id=<?=$value['id_societe']?>"><?=$value['nom_societe']?></a></td>
+                <td class="tabrow"><a href="index.php?page=lepognon_<?=$admin_link?>&id=<?=$value['id']?>" title="<?=$admin_link?>"><?=$value['numero']?></a></td>
+                <td class="tabrow"><a href="index.php?page=lesboites_<?=$admin_link?>&id=<?=$value['id_societe']?>" title="<?=$admin_link?>"><?=$value['nom_societe']?></a></td>
                 <td class="tabrow"><?=$value['date_facturation']?></td>
                 <td class="tabrow"><?=$value['motif_prestation']?></td>
-                <td class="tabrow"><a href="index.php?page=lesgens_<?=$admin_link?>&id=<?=$value['id_personne']?>"><?=$value['prenom_contact']?> <?=$value['nom_contact']?></a></td>
+                <td class="tabrow"><a href="index.php?page=lesgens_<?=$admin_link?>&id=<?=$value['id_personne']?>" title="<?=$admin_link?>"><?=$value['prenom_contact']?> <?=$value['nom_contact']?></a></td>
+                <td class="tabrow"><a href="index.php?page=lepognon_detail&id=<?=$value['id']?>" title="supprimer">X</a></td>
             </tr>
         <?php } ?>
     </table>
