@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-	<!-- meta -->
+    <!-- meta -->
     <meta charset="utf-8">
 
     <!-- link -->
@@ -14,42 +14,40 @@
 </head>
 <body>
 
-<div class="menu">
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="items" id="my-nav nav-container">
-				<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="menu">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="items" id="my-nav nav-container">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-				  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" name="button">
-				  		<span class="navbar-toggler-icon"></span>
-				  	</button>
-				  	
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" name="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-				  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				  		<ul class="navbar-nav">
-				      		<li class="nav-item <?php if ($page == '') {echo 'active';} ?>">
-				       			 <a class="nav-link " href="index.php">Home 
-				       			 </a>
-				      		</li>
-				      		<li class="nav-item <?php if (strpos($page, 'lesboites') === 0) {echo 'active';} ?>">
-				       			 <a class="nav-link " href="index.php?page=lesboites_liste">Sociétés 
-				       			 </a>
-				      		</li>
-				      		<li class="nav-item <?php if (strpos($page, 'lesgens') === 0) {echo 'active';}?>">
-				        		<a class="nav-link" href="index.php?page=lesgens_liste">Contacts
-				       			</a>
-				      		</li>
-				      		
-				      		<li class="nav-item <?php if (strpos($page, 'lepognon') === 0) {echo 'active';} ?>">
-				        		<a class="nav-link" href="index.php?page=lepognon_liste">Factures
-				        		</a>
-				      		</li>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item <?php if ($page == 'accueil' || $page == '') {echo 'active';} ?>">
+                                    <a class="nav-link " href="index.php">Home
+                                    </a>
+                                </li>
+                                <li class="nav-item <?php if (strpos($page, 'lesboites') === 0) {echo 'active';} ?>">
+                                    <a class="nav-link " href="index.php?page=lesboites_liste">Sociétés
+                                    </a>
+                                </li>
+                                <li class="nav-item <?php if (strpos($page, 'lesgens') === 0) {echo 'active';}?>">
+                                    <a class="nav-link" href="index.php?page=lesgens_liste">Contacts
+                                    </a>
+                                </li>
 
-				      		<?php
-				      			if($log){			      		
+                                <li class="nav-item <?php if (strpos($page, 'lepognon') === 0) {echo 'active';}?>">
+                                    <a class="nav-link" href="index.php?page=lepognon_liste">Factures
+                                    </a>
+                                </li>
 
-				      		?>
+							<?php if($log){
 
+							?>
+							
 				      		<li class="nav-item <?php if ($page == 'admin') {echo 'active';} ?>">
 				        		<a class="nav-link" href="index.php?page=admin">Dashboard
 				        		</a>
@@ -66,19 +64,19 @@
 				      		<?php
 				      			}else{
 				      		?>
-				      			<li class="nav-item <?php if (strpos($page, 'connection') === 0) {echo 'active';} ?>">
-				        		<a class="nav-link" href="index.php?page=connection&op=accueil">Log in
-				        		</a>
-				      		</li>
+				      		<li class="nav-item <?php if (strpos($page, 'deconnection') === 0) {echo 'active';}?>">
+                                <a class="nav-link" href="index.php?page=connection&op=accueil">Log in
+                                </a>
+                            </li>
 
-				      		<?php
-				      		}
-				      		?>
-						
-				    	</ul>
-					</div>
-				</nav>
-			</div>	
-		</div>	
-	</div>			
-</div>
+                                    <?php
+                                }
+                                ?>
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
