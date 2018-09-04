@@ -2,7 +2,7 @@ body {
     padding: 10px 20px 10px 20px;
     font-family: verdana, arial;
     font-size: 17px;
-    color: #637e75;
+    color: red;
 }
 label {
     width: 160px;
@@ -96,7 +96,7 @@ h3 a:hover{
 .rouge {
     color: #dd0f0f;
 }
-.actif {
+/*.actif {
     border-style: solid;
     border-color: #8a8800;
     border-width: 2px;
@@ -113,7 +113,7 @@ h3 a:hover{
     margin: auto;
     padding: 3px;
     border-radius: 50%;
-}
+}*/
 .notes {
     color: #be0bb7;
     font-size: 12px;

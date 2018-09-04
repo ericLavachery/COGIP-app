@@ -1,7 +1,4 @@
-
-<?php include('header.php') ?>
-
-    <h1><?= $titre ?></h1>
+<?php include 'header.php' ?>
 
 <h3><a href="index.php?page=lesboites_detail&id=<?=$personnes['id_societe']?>"><?=$personnes['nom_societe']?></a></h3>
    

@@ -84,3 +84,7 @@
             </div>
         </div>
     </div>
+
+    <div>
+    	<h1 class="title_page"><?= $titre ?></h1>
+    </div>

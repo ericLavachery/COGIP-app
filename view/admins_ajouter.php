@@ -1,6 +1,4 @@
-<?php include('header.php') ?>
-
-    <h1><?= $titre ?></h1>
+<?php include 'header.php' ?>
 
     <form action="" method="post">
         <div>

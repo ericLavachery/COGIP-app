@@ -1,6 +1,4 @@
-<?php include('header.php') ?>
-
-    <h1><?= $titre ?></h1>
+<?php include 'header.php' ?>
 
     <h3><?=$factures['type']?> : <a href="index.php?page=lesboites_detail&id=<?=$factures['id_societe']?>"><?=$factures['nom_societe']?></a></h3>
     <p><span class="detailtitle">Prestation :</span> <?=$factures['motif_prestation']?></p>
