@@ -3,21 +3,26 @@
 <head>
     <!-- meta -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="COGIP c'est chic">
+    <meta name="theme-color" content="#317EFB"/>
 
     <!-- link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="view/css/style.css">
+    
     <!--fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
     <!-- title -->
     <title>COGIP : <?= $titre ?></title>
 
 </head>
 <body>
 
-	<div class="logo">
-		<img class="rounded mx-auto d-block" src="view/img/logo.png">
-	</div>
+    <div class="logo">
+        <img class="rounded mx-auto d-block" src="view/img/logo.png">
+    </div>
 
     <div class="menu">
         <div class="row">
@@ -49,30 +54,30 @@
                                     </a>
                                 </li>
 
-							<?php if($log){
+                                <?php if($log){
 
-							?>
+                                    ?>
 
-				      		<li class="nav-item <?php if ($page == 'admin') {echo 'active';} ?>">
-				        		<a class="nav-link" href="index.php?page=admin">Dashboard
-				        		</a>
-				      		</li>
-				      		<li class="nav-item <?php if (strpos($page, 'lesboss') === 0) {echo 'active';} ?>">
-				        		<a class="nav-link" href="index.php?page=lesboss_liste">Admin
-				        		</a>
-				      		</li>
-				      		<li class="nav-item <?php if (strpos($page, 'deconnection') === 0) {echo 'active';}?>">
-				        		<a class="nav-link" href="?page=deconnection&op=<?=$page?>">Log out
-				        		</a>
-				      		</li>
+                                    <li class="nav-item <?php if ($page == 'admin') {echo 'active';} ?>">
+                                        <a class="nav-link" href="index.php?page=admin">Dashboard
+                                        </a>
+                                    </li>
+                                    <li class="nav-item <?php if (strpos($page, 'lesboss') === 0) {echo 'active';} ?>">
+                                        <a class="nav-link" href="index.php?page=lesboss_liste">Admin
+                                        </a>
+                                    </li>
+                                    <li class="nav-item <?php if (strpos($page, 'deconnection') === 0) {echo 'active';}?>">
+                                        <a class="nav-link" href="?page=deconnection&op=<?=$page?>">Log out
+                                        </a>
+                                    </li>
 
-				      		<?php
-				      			}else{
-				      		?>
-				      		<li class="nav-item <?php if (strpos($page, 'deconnection') === 0) {echo 'active';}?>">
-                                <a class="nav-link" href="index.php?page=connection&op=accueil">Log in
-                                </a>
-                            </li>
+                                    <?php
+                                }else{
+                                    ?>
+                                    <li class="nav-item <?php if (strpos($page, 'deconnection') === 0) {echo 'active';}?>">
+                                        <a class="nav-link" href="index.php?page=connection&op=accueil">Log in
+                                        </a>
+                                    </li>
 
                                     <?php
                                 }
@@ -87,5 +92,5 @@
     </div>
 
     <div class="title_page">
-    	<h1><?= $titre ?></h1>
+        <h1><?= $titre ?></h1>
     </div>
