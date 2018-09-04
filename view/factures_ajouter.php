@@ -21,24 +21,6 @@
             <label for="motif_prestation">Motif : </label>
             <input type="text" name="motif_prestation" value="<?= $motif ?>" required>
         </div>
-        <!--<div>
-            <label for="societe_id"> Société : </label>
-            <select name="societe_id" required>
-                <option value="" selected></option>
-                <?php foreach ($societes as $key => $value){?>
-                    <option value="<?= $value['id']?>"<?php if ($societe == $value['id']) {echo ' selected';}; ?>><?= $value['nom']?></option>
-                <?php } ?>
-            </select>
-        </div>
-        <div>
-            <label for="personne_id"> Personne de contact : </label>
-            <select name="personne_id" required>
-                <option value="" selected></option>
-                <?php foreach ($personnes as $key => $value){?>
-                    <option value="<?= $value['id']?>"<?php if ($personne == $value['id']) {echo ' selected';}; ?>><?= $value['prenom']?> <?= $value['nom']?></option>
-                <?php } ?>
-            </select>
-        </div>-->
         <div>
             <label for="personne_id"> Contact : </label>
             <select name="personne_id" required>
