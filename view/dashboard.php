@@ -28,7 +28,7 @@
                 <td class="tabrow"><?=$value['type']?></td>
                 <td class="tabrow"><?=$value['telephone']?></td>
                 <td class="tabrow"><?=$value['tva']?></td>
-                <td class="tabrow"><a href="index.php?page=lesboites_detail&id=<?=$value['id_societe']?>" title="supprimer">X</a></td>
+                <td class="tabrow"><a href="index.php?page=lesboites_detail&act=del&id=<?=$value['id_societe']?>" title="supprimer">X</a></td>
             </tr>
         <?php } ?>
     </table>
@@ -54,7 +54,7 @@
                 <td class="tabrow"><a href="index.php?page=lesboites_<?=$admin_link?>&id=<?=$value['id_societe']?>" title="<?=$admin_link?>"><?=$value['nom_societe']?></a></td>
                 <td class="tabrow"><?=$value['telephone']?></td>
                 <td class="tabrow"><?=$value['email']?></td>
-                <td class="tabrow"><a href="index.php?page=lesgens_detail&id=<?=$value['id']?>" title="supprimer">X</a></td>
+                <td class="tabrow"><a href="index.php?page=lesgens_detail&act=del&id=<?=$value['id']?>" title="supprimer">X</a></td>
             </tr>
         <?php } ?>
     </table>
@@ -82,7 +82,7 @@
                 <td class="tabrow"><?=$value['date_facturation']?></td>
                 <td class="tabrow"><?=$value['motif_prestation']?></td>
                 <td class="tabrow"><a href="index.php?page=lesgens_<?=$admin_link?>&id=<?=$value['id_personne']?>" title="<?=$admin_link?>"><?=$value['prenom_contact']?> <?=$value['nom_contact']?></a></td>
-                <td class="tabrow"><a href="index.php?page=lepognon_detail&id=<?=$value['id']?>" title="supprimer">X</a></td>
+                <td class="tabrow"><a href="index.php?page=lepognon_detail&act=del&id=<?=$value['id']?>" title="supprimer">X</a></td>
             </tr>
         <?php } ?>
     </table>
