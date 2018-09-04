@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="view/css/style.css">
-    <title>COGIP : <?= $titre ?></title>
-</head>
-<body><?php include '_navig.php' ?>
+<?php include('header.php') ?>
+
     <h1><?= $titre ?></h1>
 
     <h3><?=$factures['type']?> : <a href="index.php?page=lesboites_detail&id=<?=$factures['id_societe']?>"><?=$factures['nom_societe']?></a></h3>

@@ -14,20 +14,23 @@
 </head>
 <body>
 
+	<div class="logo">
+		<img src="view/img/logo.png">
+	</div>
+
     <div class="menu">
         <div class="row">
             <div class="col-sm-12">
                 <div class="items" id="my-nav nav-container">
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3a9ba9;">
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" name="button">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
-
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
-                                <li class="nav-item <?php if ($page == '') {echo 'active';} ?>">
+                                <li class="nav-item <?php if ($page == 'accueil' || $page == '') {echo 'active';} ?>">
                                     <a class="nav-link " href="index.php">Home
                                     </a>
                                 </li>
@@ -45,30 +48,30 @@
                                     </a>
                                 </li>
 
-                                <?php
-                                if($log){
-                                    ?>
+							<?php if($log){
 
-                                    <li class="nav-item <?php if ($page == 'admin') {echo 'active';}?>">
-                                        <a class="nav-link" href="index.php?page=admin">Dashboard
-                                        </a>
-                                    </li>
-                                    <li class="nav-item <?php if (strpos($page, 'lesboss') === 0) {echo 'active';}?>">
-                                        <a class="nav-link" href="index.php?page=lesboss_liste">Admin
-                                        </a>
-                                    </li>
-                                    <li class="nav-item <?php if (strpos($page, 'connection') === 0) {echo 'active';}?>">
-                                        <a class="nav-link" href="?page=deconnection&op=<?=$page?>">Log out
-                                        </a>
-                                    </li>
+							?>
+							
+				      		<li class="nav-item <?php if ($page == 'admin') {echo 'active';} ?>">
+				        		<a class="nav-link" href="index.php?page=admin">Dashboard
+				        		</a>
+				      		</li>
+				      		<li class="nav-item <?php if (strpos($page, 'lesboss') === 0) {echo 'active';} ?>">
+				        		<a class="nav-link" href="index.php?page=lesboss_liste">Admin
+				        		</a>
+				      		</li>
+				      		<li class="nav-item <?php if (strpos($page, 'deconnection') === 0) {echo 'active';}?>">
+				        		<a class="nav-link" href="?page=deconnection&op=<?=$page?>">Log out
+				        		</a>
+				      		</li>
 
-                                    <?php
-                                }else{
-                                    ?>
-                                    <li class="nav-item <?php if (strpos($page, 'deconnection') === 0) {echo 'active';}?>">
-                                        <a class="nav-link" href="index.php?page=connection&op=accueil">Log in
-                                        </a>
-                                    </li>
+				      		<?php
+				      			}else{
+				      		?>
+				      		<li class="nav-item <?php if (strpos($page, 'deconnection') === 0) {echo 'active';}?>">
+                                <a class="nav-link" href="index.php?page=connection&op=accueil">Log in
+                                </a>
+                            </li>
 
                                     <?php
                                 }

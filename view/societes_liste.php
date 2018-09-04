@@ -1,5 +1,4 @@
 <?php include('header.php') ?>
-<?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
         <a href="index.php?page=lesboites_liste"><button class="form" type="button" name="button">Toutes les sociétés</button></a>
         <a href="index.php?page=lesboites_liste&ctype=cln"><button class="form" type="button" name="button">Clients</button></a>

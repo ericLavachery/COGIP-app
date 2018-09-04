@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include '_navig.php' ?>
+
     <h1><?= $titre ?></h1>
 
     <form action="" method="post">
