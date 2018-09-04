@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="view/css/style.css">
-    <title>COGIP : <?= $titre ?></title>
-</head>
-<body><?php include '_navig.php' ?>
+<?php include('header.php') ?>
+<?php include '_navig.php' ?>
     <h1><?= $titre ?></h1>
 
     <form action="" method="post">
@@ -47,5 +41,5 @@
     <div class="rouge">
         <?= $message ?>
     </div>
-</body>
-</html>
+
+<?php include('footer.php') ?>
