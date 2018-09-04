@@ -1,4 +1,7 @@
 <?php
+//Titre de la page
+$titre = $admins['nom'];
+
 //admin
 $idadmins = $_GET['id'];
   $query =
@@ -8,5 +11,5 @@ $idadmins = $_GET['id'];
     ";
 	$stmt = $db->query($query);
 	$admins = $stmt->fetch();
-  $titre = $admins['nom'];
+  
 ?>

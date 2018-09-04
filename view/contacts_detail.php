@@ -10,10 +10,13 @@
     <h1><?= $titre ?></h1>
 
 <h3><a href="index.php?page=lesboites_detail&id=<?=$personnes['id_societe']?>"><?=$personnes['nom_societe']?></a></h3>
-
-    <p><span class="detailtitle">Adresse société :</span> <?=$personnes['adresse_societe']?></p>
-    <p><span class="detailtitle">Tél contact :</span> <?=$personnes['telephone']?></p>
-    <p><span class="detailtitle">Email contact :</span> <?=$personnes['email']?></p>
+   
+   <div class="detail">
+        <p><span class="detailtitle">Adresse société :</span> <?=$personnes['adresse_societe']?></p>
+        <p><span class="detailtitle">Téléphone :</span> <?=$personnes['telephone']?></p>
+        <p><span class="detailtitle">Email : </span> <?=$personnes['email']?></p>
+   </div> 
+   
 
     <?php if ($admin_level === 'god'): ?>
         <br>

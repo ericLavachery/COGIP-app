@@ -1,6 +1,9 @@
 <?php
-$idfacture=$_GET['id'];
-$message = '';
+	// Titre de la page
+	$titre="Facture " . $factures['numero'];
+
+	$idfacture=$_GET['id'];
+	$message = '';
 
 try {
 	$delete_facture = $db->exec("DELETE FROM facture WHERE facture.id= $idfacture;");
@@ -28,9 +31,6 @@ try {
 	  ORDER BY facture.date_facturation";
 	$stmt = $db->query($query);
 	$factures = $stmt->fetch();
-
-	// Titre de la page
-	$titre="Facture " . $factures['numero'];
 
 }
 ?>
