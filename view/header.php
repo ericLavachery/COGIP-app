@@ -7,7 +7,8 @@
     <!-- link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="view/css/style.css">
-
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- title -->
     <title>COGIP : <?= $titre ?></title>
 
@@ -15,7 +16,7 @@
 <body>
 
 	<div class="logo">
-		<img src="view/img/logo.png">
+		<img class="rounded mx-auto d-block" src="view/img/logo.png">
 	</div>
 
     <div class="menu">
@@ -29,7 +30,7 @@
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
+                            <ul class="navbar-nav mx-auto">
                                 <li class="nav-item <?php if ($page == 'accueil' || $page == '') {echo 'active';} ?>">
                                     <a class="nav-link " href="index.php">Home
                                     </a>
@@ -51,7 +52,7 @@
 							<?php if($log){
 
 							?>
-							
+
 				      		<li class="nav-item <?php if ($page == 'admin') {echo 'active';} ?>">
 				        		<a class="nav-link" href="index.php?page=admin">Dashboard
 				        		</a>
@@ -85,6 +86,6 @@
         </div>
     </div>
 
-    <div>
-    	<h1 class="title_page"><?= $titre ?></h1>
+    <div class="title_page">
+    	<h1><?= $titre ?></h1>
     </div>

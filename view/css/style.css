@@ -46,7 +46,7 @@ textarea {
 }
 .tabrow a {
     text-decoration: none;
-    color: #8a8800;
+    color: #3a9ba9;
 }
 .tabrow a:hover {
     text-decoration: none;
@@ -62,7 +62,7 @@ p {
 }
 p a {
     text-decoration: none;
-    color: #8a8800;
+    color: #3a9ba9;
 }
 p a:hover {
     text-decoration: none;
@@ -76,14 +76,14 @@ h1 {
     margin-bottom: 14px;
 }
 h3 {
-    color: #178863;
+    color: #3a9ba9;
     font-size: 24px;
     font-weight: normal;
     padding: 0;
     margin-bottom: 10px;
 }
 h3 a {
-    color: #178863;
+    color: #3a9ba9;
     text-decoration: none;
 }
 h3 a:hover{
@@ -129,4 +129,13 @@ section a {
 }
 footer {
   margin-top: 10px;
+}
+.title_page h1 {
+  color: #096199;
+  line-height: 40px;
+  font-size: 36px;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  text-align: center;
+  word-wrap: break-word;
 }
