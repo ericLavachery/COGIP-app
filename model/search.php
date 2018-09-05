@@ -1,51 +1,54 @@
 <?php
+$search_message = '';
 $searchMe = $_GET['searchMe'];
+if (strlen($searchMe) <= 2) {
+    $searchMe = '';
+    $search_message = "C'est trop court comme recherche, faut pas dec!";
+}
 
 // sociétés
-$query = "SELECT
-societe.nom,
-societe.telephone,
-societe.tva,
-societe.id AS id_societe,
-type_soc.id,
-type_soc.type
-FROM societe, type_soc
-WHERE societe.type_soc_id = type_soc.id
-ORDER BY societe.nom ASC";
-$stmt = $db->query($query);
+$query = "SELECT *
+FROM societe
+WHERE nom LIKE ?
+OR telephone LIKE ?
+OR tva LIKE ?
+OR adresse LIKE ?
+OR pays LIKE ?
+ORDER BY nom ASC";
+$params = array("%$searchMe%", "%$searchMe%", "%$searchMe%", "%$searchMe%", "%$searchMe%");
+$stmt = $db->prepare($query);
+$stmt->execute($params);
 $societes = $stmt->fetchAll();
 
 // personnes
-$query = "SELECT
-personne.id,
-personne.nom,
-personne.prenom,
-personne.telephone,
-personne.email,
-societe.nom AS nom_societe
+$query = "SELECT *
 FROM
 personne
-LEFT JOIN societe ON personne.societe_id = societe.id
-ORDER BY personne.nom ASC";
-$stmt = $db->query($query);
+WHERE nom LIKE ?
+OR telephone LIKE ?
+OR prenom LIKE ?
+OR email LIKE ?
+ORDER BY nom ASC";
+$params = array("%$searchMe%", "%$searchMe%", "%$searchMe%", "%$searchMe%");
+$stmt = $db->prepare($query);
+$stmt->execute($params);
 $contacts = $stmt->fetchAll();
 
 // factures
-$query = "SELECT
-facture.id,
-facture.numero,
-facture.date_facturation,
-facture.motif_prestation,
-societe.nom AS nom_societe,
-personne.nom AS nom_contact,
-personne.prenom AS prenom_contact
+$query = "SELECT *
 FROM
 facture
-LEFT JOIN societe ON facture.societe_id = societe.id
-LEFT JOIN personne ON facture.personne_id = personne.id
-ORDER BY facture.date_facturation DESC";
-$stmt = $db->query($query);
+WHERE motif_prestation LIKE ?
+OR numero LIKE ?
+ORDER BY date_facturation DESC";
+$params = array("%$searchMe%", "%$searchMe%");
+$stmt = $db->prepare($query);
+$stmt->execute($params);
 $factures = $stmt->fetchAll();
+
+if (sizeof($contacts) <= 0 && sizeof($factures) <= 0 && sizeof($societes) <= 0) {
+    // code...
+}
 
 // Titre de la page
 $titre="Recherche";
