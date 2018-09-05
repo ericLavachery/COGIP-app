@@ -19,7 +19,6 @@ if(isset($_POST['btn'])){
     $pwd = filter_var($_POST['pwd'], FILTER_SANITIZE_STRING);
     $chat = sha1($pwd);
     $access = filter_var($_POST['access'], FILTER_SANITIZE_STRING);
-    //$admins_id = $_POST['admins_id'];
     $nom = filter_var($_POST['nom'], FILTER_SANITIZE_STRING);
 
     if(!empty($login) && !empty($pwd) && !empty($access) && !empty($nom)) {

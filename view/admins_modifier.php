@@ -17,8 +17,8 @@
                             <label for="access"> Access : </label>
                             <select name="access" required>
                                 <option value="" selected></option>
-                                <option value="god" selected>god</option>
-                                <option value="modo" selected>modo</option>
+                                <option value="god"<?php if ($access == 'god') {echo ' selected';} ?>>god</option>
+                                <option value="modo"<?php if ($access == 'modo') {echo ' selected';} ?>>modo</option>
                             </select>
                         </div>
                         <div>
