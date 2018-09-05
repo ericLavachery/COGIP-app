@@ -72,7 +72,6 @@
                                         </a>
                                     </li>
                                 <?php endif; ?>
-
                             </ul>
                         </div>
                     </nav>

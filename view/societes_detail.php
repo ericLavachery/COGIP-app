@@ -6,7 +6,7 @@
         <div class="card-body mx-auto">
             <h3>Société</h3>
             <div class="detail">
-                <p><span class="detailtitle">TYpe :</span><?=$societe['type']?></p>
+                <p><span class="detailtitle">Type :</span><?=$societe['type']?></p>
                 <p><span class="detailtitle">Adresse : </span><?=$societe['adresse']?> | <?=$societe['pays']?></p>
                 <p><span class="detailtitle">Téléphone :</span><?=$societe['telephone']?></p>
                 <p><span class="detailtitle">TVA :</span><?=$societe['tva']?></p>

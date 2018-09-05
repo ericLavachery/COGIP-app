@@ -17,6 +17,7 @@ if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
 } else {
     $log = FALSE;
 }
+
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
     // info page => redirige vers la page

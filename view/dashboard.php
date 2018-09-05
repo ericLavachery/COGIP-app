@@ -1,6 +1,6 @@
 <?php include 'header.php' ?>
 <div class="container">
-  <div class="row">
+  <div class="row mx auto">
     <div class="col-sm-12 mx-auto">
       <?php if ($admin_message != ''): ?>
           <p class="rouge"><?= $admin_message ?></p>
@@ -8,6 +8,10 @@
       <?php if ($securityMessage != ''): ?>
           <p class="rouge"><?= $securityMessage ?></p>
       <?php endif; ?>
+      <form class="form-inline my-2 my-lg-0" action="" method="GET">
+          <input type="hidden" name="page" value="recherche">
+          <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search" name="searchMe">
+      </form>
     </div>
   </div>
 </div>
