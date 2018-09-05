@@ -39,6 +39,8 @@ if (isset($_GET['page'])) {
         $fichier = 'login';
     } elseif ($page == 'deconnection') {
         $fichier = 'logout';
+    } elseif ($page == 'recherche') {
+        $fichier = 'search';
     } else {
         $fichier = 'maison';
     }

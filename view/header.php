@@ -10,7 +10,7 @@
     <!-- link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="view/css/style.css">
-    
+
     <!--fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -53,11 +53,7 @@
                                     <a class="nav-link" href="index.php?page=lepognon_liste">Factures
                                     </a>
                                 </li>
-
-                                <?php if($log){
-
-                                    ?>
-
+                                <?php if ($log): ?>
                                     <li class="nav-item <?php if ($page == 'admin') {echo 'active';} ?>">
                                         <a class="nav-link" href="index.php?page=admin">Dashboard
                                         </a>
@@ -70,18 +66,12 @@
                                         <a class="nav-link" href="?page=deconnection&op=<?=$page?>">Log out
                                         </a>
                                     </li>
-
-                                    <?php
-                                }else{
-                                    ?>
+                                <?php else: ?>
                                     <li class="nav-item <?php if (strpos($page, 'deconnection') === 0) {echo 'active';}?>">
                                         <a class="nav-link" href="index.php?page=connection&op=accueil">Log in
                                         </a>
                                     </li>
-
-                                    <?php
-                                }
-                                ?>
+                                <?php endif; ?>
 
                             </ul>
                         </div>
