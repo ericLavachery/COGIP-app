@@ -25,13 +25,11 @@ textarea {
     display: inline-block;
     margin: 5px 0;
 }
-.form button {
-    margin-top: 10px;
-    margin-right: 20px;
+.push {
+    margin-left: 10px;
 }
-.navig button {
-    display: block;
-    margin: auto;
+button {
+    margin-right: 10px;
 }
 .tabtitle {
     padding: 0px 10px 5px 10px;

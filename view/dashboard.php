@@ -40,6 +40,7 @@
               <?php } ?>
           </table>
           <div class="subnav">
+              <span class="push"></span>
               <a href="index.php?page=lesboites_liste"><button class="btn btn-outline-info" type="button" name="button">Toutes les sociétés</button></a>
               <a href="index.php?page=lesboites_liste&ctype=cln"><button class="btn btn-outline-info" type="button" name="button">Clients</button></a>
               <a href="index.php?page=lesboites_liste&ctype=frn"><button class="btn btn-outline-info" type="button" name="button">Fournisseurs</button></a>
@@ -69,6 +70,7 @@
               <?php } ?>
           </table>
           <div class="subnav">
+              <span class="push"></span>
               <a href="index.php?page=lesgens_liste"><button class="btn btn-outline-info" type="button" name="button">Tous les contacts</button></a>
               <a href="index.php?page=lesgens_ajouter"><button class="btn btn-outline-info" type="button" name="button">Ajouter un contact</button></a>
           </div>
@@ -98,6 +100,7 @@
               <?php } ?>
           </table>
           <div class="subnav">
+              <span class="push"></span>
               <a href="index.php?page=lepognon_liste"><button class="btn btn-outline-info" type="button" name="button">Toutes les factures</button></a>
               <a href="index.php?page=lepognon_ajouter"><button class="btn btn-outline-info" type="button" name="button">Ajouter une facture</button></a>
           </div>

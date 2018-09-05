@@ -26,6 +26,7 @@
 
             <?php if ($admin_level != ''): ?>
                 <div class="subnav">
+                    <span class="push"></span>
                     <a href="index.php?page=lepognon_ajouter"><button class="btn btn-outline-info" type="button" name="button">Ajouter</button></a>
                 </div>
             <?php endif; ?>

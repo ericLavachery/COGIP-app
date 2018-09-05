@@ -1,7 +1,7 @@
 <?php
 $search_message = '';
 if (isset($_GET['searchMe'])) {
-    $searchMe = $_GET['searchMe'];
+    $searchMe = filter_var($_GET['searchMe'], FILTER_SANITIZE_STRING);
     if (strlen($searchMe) <= 1) {
         $search_message = '"' . $searchMe . '"' . " c'est trop court comme recherche, faut pas déc!";
         $searchMe = '';

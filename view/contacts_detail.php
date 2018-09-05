@@ -12,7 +12,6 @@
                   <p><span class="detailtitle">Email : </span> <?=$personnes['email']?></p>
              </div>
 
-
               <?php if ($admin_level === 'god'): ?>
                   <br>
                   <a href="index.php?page=lesgens_modifier&id=<?=$idcontact?>"><button class="btn btn-outline-info" type="button" name="button">Modifier</button></a>

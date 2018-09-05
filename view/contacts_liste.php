@@ -22,6 +22,7 @@
           </table>
           <?php if ($admin_level != ''): ?>
               <div class="subnav">
+                  <span class="push"></span>
                   <a href="index.php?page=lesgens_ajouter"><button class="btn btn-outline-info" type="button" name="button">Ajouter</button></a>
               </div>
           <?php endif; ?>
