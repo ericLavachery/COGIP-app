@@ -17,17 +17,8 @@
                   <label for="access"> Access : </label>
                   <select name="access" required>
                       <option value="" selected></option>
-                      <?php
-                      $lastAccess = '';
-                      foreach ($admins as $key => $value){
-                        if ($lastAccess != $value['access']){
-                        ?>
-
-                          <option value="<?= $value['access']?>"<?php if ($access == $value['access']) {echo ' selected';}; ?>><?= $value['access']?></option>
-
-                      <?php }
-                      $lastAccess = $value['access'];
-                     } ?>
+                      <option value="god" selected>god</option>
+                      <option value="modo" selected>modo</option>
                   </select>
               </div>
               <div>
