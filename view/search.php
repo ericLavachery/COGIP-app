@@ -8,7 +8,7 @@
             <?php endif; ?>
             <form class="form-inline my-2 my-lg-0" action="" method="GET">
                 <input type="hidden" name="page" value="recherche">
-                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search" name="searchMe">
+                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search" name="searchMe" value="<?=$searchMe?>">
             </form>
         </div>
     </div>
