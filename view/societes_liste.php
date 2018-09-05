@@ -4,6 +4,7 @@
     <div class="col-sm-12">
       <div class="card">
         <div class="card-body mx-auto">
+            <span class="push"></span>
             <a href="index.php?page=lesboites_liste"><button class="btn btn-outline-info" type="button" name="button">Toutes les sociétés</button></a>
             <a href="index.php?page=lesboites_liste&ctype=cln"><button class="btn btn-outline-info" type="button" name="button">Clients</button></a>
             <a href="index.php?page=lesboites_liste&ctype=frn"><button class="btn btn-outline-info" type="button" name="button">Fournisseurs</button></a>
@@ -29,6 +30,7 @@
 
             <?php if ($admin_level != ''): ?>
                 <div class="subnav">
+                    <span class="push"></span>
                     <a href="index.php?page=lesboites_ajouter"><button class="btn btn-outline-info" type="button" name="button">Ajouter</button></a>
                 </div>
             <?php endif; ?>

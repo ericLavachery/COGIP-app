@@ -18,6 +18,8 @@
                   </tr>
               <?php } ?>
           </table>
+          <br>
+          <span class="push"></span>
           <a href="index.php?page=lesboss_ajouter"><button class="btn btn-outline-info" type="button" name="button">Ajouter</button></a>
         </div>
       </div>
