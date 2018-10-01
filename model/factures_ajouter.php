@@ -45,7 +45,7 @@ if(isset($_POST['btn'])){
             $add_value = $db->query
             ('INSERT INTO facture(numero, date_facturation, motif_prestation,societe_id,personne_id) VALUES("'.$numero.'", "'.$date_facturation.'", "'.$motif_prestation.'", "'.$societe_id.'", "'.$personne_id.'")');
 
-            $messageOK = "Bien ouej JC ! La facture n°" . $numero . " a bien été ajoutée " ;
+            $messageOK = "Bien ouej JC ! La facture n°" . $numero . " a bien été ajoutée" ;
             $numero = '';
             $date_facturation = '';
             $motif_prestation = '';
@@ -53,7 +53,7 @@ if(isset($_POST['btn'])){
             $personne_id = '';
         }catch (Exception $e) {
 
-            $messageKO = 'Ce numéro de facture existe déjà';
+            $messageKO = 'Tu crains JC! Ce numéro de facture existe déjà';
         }
     }
 }

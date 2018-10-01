@@ -32,9 +32,9 @@ if(isset($_POST['btn'])){
         $db->beginTransaction();
         $db->exec("UPDATE admins SET login='$login',pwd='$chat',access='$access',nom='$nom' WHERE id ='$truc'; ");
         $db->commit();
-        $messageOK = "Bien ouej JC";
+        $messageOK = "Bien ouej JC! L'utilisateur ".$nom." a bien été modifié";
     }else{
-        $messageKO = "Tu crains JC";
+        $messageKO = "Tu crains JC! Ce login existe déjà";
     }
 }
 $titre = "Modif admin";

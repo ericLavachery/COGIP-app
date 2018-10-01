@@ -42,9 +42,9 @@ if(isset($_POST['btn'])){
         $db->exec("UPDATE societe SET nom='$nom',adresse='$adresse',telephone='$telephone',pays='$pays',tva='$tva',type_soc_id='$type_soc_id' WHERE id = $idsociete; ");
         $db->commit();
 
-        $messageOK = "Bien ouej JC";
+        $messageOK = "Bien ouej JC! La société ".$nom." a bien été modifiée";
     }else{
-        $messageKO = "Tu crains JC";
+        $messageKO = "Tu crains JC! Cette société existe déjà";
     }
 }
 

@@ -26,14 +26,13 @@ if(isset($_POST['btn'])){
         //insérer nouvelles données
         $add_value = $db->query
         ('INSERT INTO admins (login, pwd, access, nom) VALUES("'.$login.'", "'.$chat.'", "'.$access.'","'.$nom.'")');
+        $messageOK = "Bien ouèj JC! Le login ".$login." pour ".$nom." a bien été ajouté.";
         $login = '';
         $pwd = '';
         $access = '';
-        //$admins_id = '';
         $nom = '';
-        $messageOK = "Bien ouej JC";
     }else{
-        $messageKO = "Tu crains JC";
+        $messageKO = "Tu crains JC! Cet utilisateur existe déjà";
     }
 }
 $titre = "Nouvel admin";

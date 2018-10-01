@@ -29,7 +29,7 @@ if(isset($_POST['btn'])){
             $add_value = $db->query
             ('INSERT INTO societe(nom, adresse, telephone, pays, tva, type_soc_id) VALUES("'.$nom.'", "'.$adresse.'", "'.$telephone.'", "'.$pays.'", "'.$tva.'", "'.$type_soc_id.'")');
 
-            $messageOK = "Bien ouej JC ! La société " . $nom . " a bien été ajoutée." ;
+            $messageOK = "Bien ouej JC! La société " . $nom . " a bien été ajoutée." ;
             $nom = '';
             $adresse = '';
             $pays = '';
@@ -39,7 +39,7 @@ if(isset($_POST['btn'])){
 
         }catch (Exception $e) {
 
-            $messageKO = 'Cette société existe déjà';
+            $messageKO = 'Tu crains JC! Cette société existe déjà';
         }
     }
 }

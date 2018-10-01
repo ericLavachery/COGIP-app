@@ -48,9 +48,9 @@ if(isset($_POST['btn'])){
         $db->exec("UPDATE personne SET nom='$nom',prenom='$prenom',telephone='$telephone',email='$val_email',societe_id='$societe_id' WHERE id = $idcontact; ");
         $db->commit();
 
-        $messageOK = "Bien ouej JC";
+        $messageOK = "Bien ouej JC! Le contact ".$prenom." ".$nom." a bien été modifié";
     }else{
-        $messageKO = "Tu crains JC";
+        $messageKO = "Tu crains JC! Ce contact existe déjà";
     }
 }
 

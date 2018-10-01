@@ -54,9 +54,9 @@ if(isset($_POST['btn'])){
         $db->exec("UPDATE facture SET date_facturation='$date_facturation',numero='$numero',motif_prestation='$motif_prestation',personne_id='$personne_id',societe_id='$societe_id' WHERE id = $idfacture; ");
         $db->commit();
 
-        $messageOK = "Bien ouej JC";
+        $messageOK = "Bien ouej JC! La facture n°".$numero." a bien été modifiée";
     }else{
-        $messageKO = "Tu crains JC";
+        $messageKO = "Tu crains JC! Ce numéro de facture existe déjà";
     }
 }
 
