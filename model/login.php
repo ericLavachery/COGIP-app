@@ -1,5 +1,6 @@
 <?php
-$message = '';
+$messageOK = '';
+$messageKO = '';
 $log = FALSE;
 session_unset ();
 session_destroy ();
@@ -32,7 +33,7 @@ if (isset($_POST['login']) && isset($_POST['pwd'])) {
     }
     else {
         // Le visiteur n'a PAS été reconnu
-        $message = "Nom d'utilisateur ou mot de passe non valide";
+        $messageKO = "Nom d'utilisateur ou mot de passe non valide";
         session_start ();
         session_unset ();
         session_destroy ();

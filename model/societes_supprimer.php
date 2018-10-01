@@ -1,12 +1,13 @@
 <?php
 $idsociete=$_GET['id'];
-$message = '';
+$messageOK = '';
+$messageKO = '';
 
 try {
 	$delete_contact = $db->exec("DELETE FROM societe WHERE societe.id= $idsociete;");
 	header('location: index.php?page=lesboites_liste');
 }catch (Exception $e) {
-	$message = 'Vous ne pouvez pas supprimer cette société, car son nom figure sur des factures ou des contacts';
+	$messageKO = 'Vous ne pouvez pas supprimer cette société, car son nom figure sur des factures ou des contacts';
 
 	// détail société
 	$query = "SELECT *

@@ -72,4 +72,4 @@ if (isset($_GET['msg'])) {
 
 // Titre de la page
 $titre="Dashboard";
- ?>
+?>

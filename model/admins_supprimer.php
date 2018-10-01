@@ -1,6 +1,7 @@
 <?php
 $idadmin=$_GET['id'];
-$message = '';
+$messageOK = '';
+$messageKO = '';
 
 $query =
 "SELECT *
@@ -11,13 +12,13 @@ $stmt = $db->query($query);
 $admin = $stmt->fetch();
 
 if ($_SESSION['login'] == $admin['login']) {
-	$message = "Vous ne pouvez pas supprimer cet administrateur, parce que le suicide c'est mal! Faites-vous suivre, merde!";
+	$messageKO = "Vous ne pouvez pas supprimer cet administrateur, parce que le suicide c'est mal! Faites-vous suivre, merde!";
 } else {
 	try {
 		$delete_admin = $db->exec("DELETE FROM admins WHERE id= $idadmin;");
 		header('location: index.php?page=lesboss_liste');
 	} catch (Exception $e) {
-		$message = "Vous ne pouvez pas supprimer cet administrateur, parce qu'on vous le dit!";
+		$messageKO = "Vous ne pouvez pas supprimer cet administrateur, parce qu'on vous le dit!";
 	}
 }
 

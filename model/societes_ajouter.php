@@ -7,7 +7,8 @@ $pays = '';
 $tva = '';
 $telephone = '';
 $type_soc_id = '';
-$message = '';
+$messageOK = '';
+$messageKO = '';
 
 $query = "SELECT * FROM type_soc";
 $stmt = $db->query($query);
@@ -28,7 +29,7 @@ if(isset($_POST['btn'])){
             $add_value = $db->query
             ('INSERT INTO societe(nom, adresse, telephone, pays, tva, type_soc_id) VALUES("'.$nom.'", "'.$adresse.'", "'.$telephone.'", "'.$pays.'", "'.$tva.'", "'.$type_soc_id.'")');
 
-            $message = "Bien ouej JC ! La société " . $nom . " a bien été ajoutée." ;
+            $messageOK = "Bien ouej JC ! La société " . $nom . " a bien été ajoutée." ;
             $nom = '';
             $adresse = '';
             $pays = '';
@@ -38,8 +39,8 @@ if(isset($_POST['btn'])){
 
         }catch (Exception $e) {
 
-         $message = 'Cette société existe déjà';
-            }
+            $messageKO = 'Cette société existe déjà';
+        }
     }
 }
 

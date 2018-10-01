@@ -1,12 +1,13 @@
 <?php
 $idcontact=$_GET['id'];
-$message = '';
+$messageOK = '';
+$messageKO = '';
 
 try {
 	$delete_contact = $db->exec("DELETE FROM personne WHERE personne.id= $idcontact;");
 	header('Location: index.php?page=lesgens_liste');
 }catch (Exception $e) {
-	$message = 'Vous ne pouvez pas supprimer cet utilisateur, car son nom figure sur des factures';
+	$messageKO = 'Vous ne pouvez pas supprimer cet utilisateur, car son nom figure sur des factures';
 
 	// personnes
 	$query =

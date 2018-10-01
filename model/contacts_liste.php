@@ -23,4 +23,4 @@ $stmt = $db->query($query);
 $personnes = $stmt->fetchAll();
 // Titre de la page
 $titre="Contacts";
- ?>
+?>

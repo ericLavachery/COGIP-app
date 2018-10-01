@@ -94,6 +94,9 @@ h3 a:hover{
 .rouge {
     color: #dd0f0f;
 }
+.vert {
+    color: #31a339;
+}
 .actif {
     border-style: solid;
     border-color: #8a8800;

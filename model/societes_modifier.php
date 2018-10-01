@@ -1,6 +1,7 @@
 <?php
 $idsociete=$_GET['id'];
-$message = '';
+$messageOK = '';
+$messageKO = '';
 
 // détail société
 $query = "SELECT *
@@ -37,13 +38,13 @@ if(isset($_POST['btn'])){
 
     if(!empty($nom) && !empty($adresse) && !empty($pays) && !empty($telephone) && !empty($tva) && !empty($type_soc_id)) {
         //changer données
-		$db->beginTransaction();
-		$db->exec("UPDATE societe SET nom='$nom',adresse='$adresse',telephone='$telephone',pays='$pays',tva='$tva',type_soc_id='$type_soc_id' WHERE id = $idsociete; ");
-		$db->commit();
+        $db->beginTransaction();
+        $db->exec("UPDATE societe SET nom='$nom',adresse='$adresse',telephone='$telephone',pays='$pays',tva='$tva',type_soc_id='$type_soc_id' WHERE id = $idsociete; ");
+        $db->commit();
 
-        $message = "Bien ouej JC";
+        $messageOK = "Bien ouej JC";
     }else{
-        $message = "Tu crains JC";
+        $messageKO = "Tu crains JC";
     }
 }
 

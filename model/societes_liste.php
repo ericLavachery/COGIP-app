@@ -50,4 +50,4 @@ $societes = $stmt->fetchAll();
 
 // Titre de la page
 $titre="Sociétés";
- ?>
+?>

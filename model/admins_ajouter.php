@@ -4,7 +4,8 @@ $pwd = '';
 $access = '';
 //$admins_id = '';
 $nom = '';
-$message = '';
+$messageOK = '';
+$messageKO = '';
 
 $query = "SELECT access,id
 FROM admins
@@ -30,9 +31,9 @@ if(isset($_POST['btn'])){
         $access = '';
         //$admins_id = '';
         $nom = '';
-        $message = "Bien ouej JC";
+        $messageOK = "Bien ouej JC";
     }else{
-        $message = "Tu crains JC";
+        $messageKO = "Tu crains JC";
     }
 }
 $titre = "Nouvel admin";

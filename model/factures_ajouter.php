@@ -1,27 +1,14 @@
 <?php
-// require_once('connect.php');
+
 $titre = "Nouvelle facture";
 $nmro = '';
 $datef = '';
 $motif = '';
 //$societe = '';
 $personne_id = '';
-$message = '';
-//select société
-/*$query = "SELECT
-nom, id
-FROM societe
-ORDER BY societe.nom
-ASC ";
-$societes = $db->query($query)->fetchAll();
+$messageOK = '';
+$messageKO = '';
 
-$query = "SELECT
-nom, prenom, id
-FROM personne
-ORDER BY personne.nom
-ASC ";
-$stmt = $db->query($query);
-$personnes = $stmt->fetchAll();*/
 $query =
 "SELECT
 personne.nom,
@@ -54,12 +41,12 @@ if(isset($_POST['btn'])){
     $societe_id = $societe['societe_id'];
 
     if(!empty($nmro) && !empty($datef) && !empty($motif)) {
-        //insérer nouvelles 
+        //insérer nouvelles
         try{
             $add_value = $db->query
             ('INSERT INTO facture(numero, date_facturation, motif_prestation,societe_id,personne_id) VALUES("'.$nmro.'", "'.$datef.'", "'.$motif.'", "'.$societe_id.'", "'.$personne_id.'")');
 
-            $message = "Bien ouej JC ! La facture n°" . $nmro . " a bien été ajoutée " ;
+            $messageOK = "Bien ouej JC ! La facture n°" . $nmro . " a bien été ajoutée " ;
             $nmro = '';
             $datef = '';
             $motif = '';
@@ -67,9 +54,9 @@ if(isset($_POST['btn'])){
             $personne_id = '';
         }catch (Exception $e) {
 
-         $message = 'Ce numéro de facture existe déjà';
-            }
+            $messageKO = 'Ce numéro de facture existe déjà';
+        }
     }
 }
-        
+
 ?>

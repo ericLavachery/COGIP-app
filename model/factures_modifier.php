@@ -1,6 +1,7 @@
 <?php
 $idfacture=$_GET['id'];
-$message = '';
+$messageOK = '';
+$messageKO = '';
 
 // détail facture
 $query = "SELECT *
@@ -49,13 +50,13 @@ if(isset($_POST['btn'])){
 
     if(!empty($date_facturation) && !empty($numero) && !empty($motif_prestation) && !empty($personne_id)) {
         //changer données
-		$db->beginTransaction();
-		$db->exec("UPDATE facture SET date_facturation='$date_facturation',numero='$numero',motif_prestation='$motif_prestation',personne_id='$personne_id',societe_id='$societe_id' WHERE id = $idfacture; ");
-		$db->commit();
+        $db->beginTransaction();
+        $db->exec("UPDATE facture SET date_facturation='$date_facturation',numero='$numero',motif_prestation='$motif_prestation',personne_id='$personne_id',societe_id='$societe_id' WHERE id = $idfacture; ");
+        $db->commit();
 
-        $message = "Bien ouej JC";
+        $messageOK = "Bien ouej JC";
     }else{
-        $message = "Tu crains JC";
+        $messageKO = "Tu crains JC";
     }
 }
 

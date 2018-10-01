@@ -1,6 +1,7 @@
 <?php
 $idadmin=$_GET['id'];
-$message = '';
+$messageOK = '';
+$messageKO = '';
 $login = '';
 $pwd = '';
 $access = '';
@@ -29,11 +30,11 @@ if(isset($_POST['btn'])){
     if(!empty($login) && !empty($pwd) && !empty($access) && !empty($nom)) {
         //changer données
         $db->beginTransaction();
-    		$db->exec("UPDATE admins SET login='$login',pwd='$chat',access='$access',nom='$nom' WHERE id ='$truc'; ");
-    		$db->commit();
-        $message = "Bien ouej JC";
+        $db->exec("UPDATE admins SET login='$login',pwd='$chat',access='$access',nom='$nom' WHERE id ='$truc'; ");
+        $db->commit();
+        $messageOK = "Bien ouej JC";
     }else{
-        $message = "Tu crains JC";
+        $messageKO = "Tu crains JC";
     }
 }
 $titre = "Modif admin";

@@ -31,10 +31,7 @@
                             <button class="btn btn-outline-info" type="submit" name="btn"> Modifier l'admin</button>
                         </div>
                     </form>
-
-                    <div class="rouge">
-                        <?= $message ?>
-                    </div>
+                    <?php include 'messages.php' ?>
                 </div>
             </div>
         </div>

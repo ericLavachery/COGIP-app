@@ -1,6 +1,7 @@
 <?php
 $idcontact=$_GET['id'];
-$message = '';
+$messageOK = '';
+$messageKO = '';
 
 // personnes
 $query =
@@ -43,13 +44,13 @@ if(isset($_POST['btn'])){
 
     if(!empty($nom) && !empty($prenom) && !empty($telephone) && !empty($val_email)) {
         //changer données
-		$db->beginTransaction();
-		$db->exec("UPDATE personne SET nom='$nom',prenom='$prenom',telephone='$telephone',email='$val_email',societe_id='$societe_id' WHERE id = $idcontact; ");
-		$db->commit();
+        $db->beginTransaction();
+        $db->exec("UPDATE personne SET nom='$nom',prenom='$prenom',telephone='$telephone',email='$val_email',societe_id='$societe_id' WHERE id = $idcontact; ");
+        $db->commit();
 
-        $message = "Bien ouej JC";
+        $messageOK = "Bien ouej JC";
     }else{
-        $message = "Tu crains JC";
+        $messageKO = "Tu crains JC";
     }
 }
 
