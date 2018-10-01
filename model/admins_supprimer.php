@@ -18,7 +18,7 @@ if ($_SESSION['login'] == $admin['login']) {
 		$delete_admin = $db->exec("DELETE FROM admins WHERE id= $idadmin;");
 		header('location: index.php?page=lesboss_liste');
 	} catch (Exception $e) {
-		$messageKO = "Vous ne pouvez pas supprimer cet administrateur, parce qu'on vous le dit!";
+		$messageKO = "Vous ne pouvez pas supprimer cet administrateur. Une ingérence Russe est soupçonnée!";
 	}
 }
 

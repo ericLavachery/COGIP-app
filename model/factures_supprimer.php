@@ -7,7 +7,7 @@ try {
 	$delete_facture = $db->exec("DELETE FROM facture WHERE facture.id= $idfacture;");
 	header('Location: index.php?page=lepognon_liste');
 }catch (Exception $e) {
-	$messageKO = "Vous ne pouvez pas supprimer cette facture, et c'est carrément louche";
+	$messageKO = "Vous ne pouvez pas supprimer cette facture. C'est certainement la faute aux Russes!";
 
 	$query =
 	"SELECT
