@@ -13,7 +13,7 @@ personne.telephone,
 personne.email,
 societe.nom AS nom_societe,
 societe.adresse AS adresse_societe,
-societe.id AS id_societe
+societe.id AS societe_id
 FROM personne, societe
 WHERE personne.societe_id = societe.id
 AND personne.id = $idcontact";
@@ -23,7 +23,7 @@ $nom = $personnes['nom'];
 $prenom = $personnes['prenom'];
 $telephone = $personnes['telephone'];
 $email = $personnes['email'];
-$societe_id = $personnes['id_societe'];
+$societe_id = $personnes['societe_id'];
 
 //societes
 $query =
@@ -40,7 +40,7 @@ if(isset($_POST['btn'])){
     $telephone = filter_var($_POST['telephone'], FILTER_SANITIZE_NUMBER_INT);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $val_email = filter_var($email, FILTER_VALIDATE_EMAIL);
-    $societe_id = $_POST['id_societe'];
+    $societe_id = $_POST['societe_id'];
 
     if(!empty($nom) && !empty($prenom) && !empty($telephone) && !empty($val_email)) {
         //changer données
