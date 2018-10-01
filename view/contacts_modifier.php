@@ -18,11 +18,11 @@
                             <input type="text" name="telephone" value="<?= $telephone ?>" required>
                         </div>
                         <div>
-                            <label for="bas"> email : </label>
+                            <label for="bas">Email : </label>
                             <input type="email" name="email" value="<?= $email ?>" required>
                         </div>
                         <div>
-                            <label for="id_societe"> Société : </label>
+                            <label for="id_societe">Société : </label>
                             <select name="id_societe" required>
                                 <option value="" selected></option>
                                 <?php foreach ($societes as $key => $value){?>

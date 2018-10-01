@@ -1,10 +1,9 @@
 <?php
 
 $titre = "Nouvelle facture";
-$nmro = '';
-$datef = '';
-$motif = '';
-//$societe = '';
+$numero = '';
+$date_facturation = '';
+$motif_prestation = '';
 $personne_id = '';
 $messageOK = '';
 $messageKO = '';
@@ -24,9 +23,9 @@ $contacts = $stmt->fetchAll();
 
 // Si utilisation du bouton "Ajouter dans la facture"
 if(isset($_POST['btn'])){
-    $nmro = filter_var($_POST['numero'], FILTER_SANITIZE_NUMBER_INT);
-    $datef = filter_var($_POST['date_facturation'], FILTER_SANITIZE_NUMBER_INT);
-    $motif = filter_var($_POST['motif_prestation'], FILTER_SANITIZE_STRING);
+    $numero = filter_var($_POST['numero'], FILTER_SANITIZE_NUMBER_INT);
+    $date_facturation = filter_var($_POST['date_facturation'], FILTER_SANITIZE_NUMBER_INT);
+    $motif_prestation = filter_var($_POST['motif_prestation'], FILTER_SANITIZE_STRING);
     /*$societe = $_POST['societe_id'];*/
     $personne_id = $_POST['personne_id'];
     $btn_delete = isset($_POST['btn_delete']);
@@ -40,16 +39,16 @@ if(isset($_POST['btn'])){
 
     $societe_id = $societe['societe_id'];
 
-    if(!empty($nmro) && !empty($datef) && !empty($motif)) {
+    if(!empty($numero) && !empty($date_facturation) && !empty($motif_prestation)) {
         //insérer nouvelles
         try{
             $add_value = $db->query
-            ('INSERT INTO facture(numero, date_facturation, motif_prestation,societe_id,personne_id) VALUES("'.$nmro.'", "'.$datef.'", "'.$motif.'", "'.$societe_id.'", "'.$personne_id.'")');
+            ('INSERT INTO facture(numero, date_facturation, motif_prestation,societe_id,personne_id) VALUES("'.$numero.'", "'.$date_facturation.'", "'.$motif_prestation.'", "'.$societe_id.'", "'.$personne_id.'")');
 
-            $messageOK = "Bien ouej JC ! La facture n°" . $nmro . " a bien été ajoutée " ;
-            $nmro = '';
-            $datef = '';
-            $motif = '';
+            $messageOK = "Bien ouej JC ! La facture n°" . $numero . " a bien été ajoutée " ;
+            $numero = '';
+            $date_facturation = '';
+            $motif_prestation = '';
             $societe_id = '';
             $personne_id = '';
         }catch (Exception $e) {

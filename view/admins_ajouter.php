@@ -18,7 +18,7 @@
                             <input type="password" name="pwd" value="<?= $pwd ?>" required>
                         </div>
                         <div>
-                            <label for="access"> Access : </label>
+                            <label for="access">Access : </label>
                             <select name="access" required>
                                 <option value="" selected></option>
                                 <option value="god"<?php if ($access == 'god') {echo ' selected';} ?>>god</option>
